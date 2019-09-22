@@ -114,6 +114,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import * as CryptoJS from 'crypto-js';
 
+import { Pro, AppInfo, DeployInfo } from '@ionic-native/pro';
 
 @NgModule({
   declarations: [

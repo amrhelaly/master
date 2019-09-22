@@ -110,8 +110,8 @@
         <variable name="APP_ID" value="4eeae18b" />
         <variable name="CHANNEL_NAME" value="Production" />
         <variable name="UPDATE_API" value="https://api.ionicjs.com" />
-        <variable name="UPDATE_METHOD" value="background" />
-        <variable name="MAX_STORE" value="2" />
+        <variable name="UPDATE_METHOD" value="auto" />
+        <variable name="MAX_STORE" value="20" />
         <variable name="MIN_BACKGROUND_DURATION" value="30" />
     </plugin>
     <engine name="ios" spec="4.5.5" />

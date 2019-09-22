@@ -111,8 +111,7 @@
         <variable name="CHANNEL_NAME" value="Production" />
         <variable name="UPDATE_API" value="https://api.ionicjs.com" />
         <variable name="UPDATE_METHOD" value="auto" />
-        <variable name="MAX_STORE" value="20" />
-        <variable name="MIN_BACKGROUND_DURATION" value="30" />
+        <variable name="MAX_STORE" value="0" />
     </plugin>
     <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="^7.1.1" />

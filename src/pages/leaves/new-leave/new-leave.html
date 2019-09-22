@@ -1,0 +1,139 @@
+<!--
+  Generated template for the NewLeavePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Leave </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-item-divider color="light"> Please provide the following details</ion-item-divider>
+    <ion-list>
+    <ion-item Id="leaveTypeId" >
+        <ion-label>Type <i class="req-symbol">*</i></ion-label>
+        <ion-select [(ngModel)]="leaveType" class="select-1" interface="action-sheet" placeholder="Choose Leave" >
+          <!-- <ion-option *ngFor="let o of hairColorData"    [value]="o"   >{{o.text}}      </ion-option> -->
+               <ion-option *ngFor="let item of LeavesTypes"   [value]="item"> {{item.leavename}}   </ion-option>
+         </ion-select>
+      </ion-item>
+      <ion-item Id="dateFrom" >
+          <ion-label>Date From <i class="req-symbol">*</i></ion-label>
+          <ion-datetime displayFormat="DDDD, DD-MMM-YYYY"  [(ngModel)]="dateFrom"   placeholder="Date From" ></ion-datetime>
+        </ion-item>
+        <ion-item Id="dateTo" >
+        <ion-label>Date To <i class="req-symbol">*</i> </ion-label>
+        <ion-datetime displayFormat="DDDD, DD-MMM-YYYY" [(ngModel)]="dateTo" placeholder="Date To"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Return Date </ion-label>
+          <ion-datetime displayFormat="DDDD, DD-MMM-YYYY" [(ngModel)]="returnDate"></ion-datetime>
+        </ion-item>
+      <ion-item>
+          <ion-label>Half Day</ion-label>
+          <ion-toggle [(ngModel)]="halfDay" color="dark"></ion-toggle>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label>Level of Sickness </ion-label>
+            <ion-select [(ngModel)]="lOStype" interface="action-sheet">
+                <ion-option *ngFor="let item of lOStypes"   [value]="item"> {{item.los}}   </ion-option>
+             </ion-select>
+          </ion-item> -->
+
+          <button ion-item  (click)="replacedTapped($event)" >
+              Replaced By
+
+            <span class="button_item_title1"  >{{selectedreplacedPesonName}}</span>
+                
+              
+                
+              </button>
+
+          <ion-item>
+              <ion-label>Compassionate Reason</ion-label>
+              <ion-select [(ngModel)]="CLRtype" interface="action-sheet">
+                 <ion-option *ngFor="let item of CLRtypes"   [value]="item"> {{item.clr}}   </ion-option>
+              </ion-select>
+            </ion-item>
+            
+              
+            <ion-item>
+                <ion-label>Comments</ion-label>
+                
+                </ion-item>
+            <ion-item >
+                <ion-textarea  [(ngModel)]="comments" class="txt-area" ></ion-textarea>
+              </ion-item >
+
+
+              <!-- <button ion-button icon-end block color='light' class='attach-btn' (click)="presentActionSheet()">
+                Add Attachement
+                <ion-icon name="md-attach"></ion-icon>
+              </button> -->
+             
+<!-- 
+              <ion-item>
+               =<button ion-button color='vlight'  class="x3" icon-only (click)="getListIndex(item)">
+                      <ion-icon name="add" color="secondary"></ion-icon>
+                    </button>
+                    <h6 class="x4">
+                      Attachments
+                  </h6 >
+                  </ion-item> -->
+    
+
+                    <ion-item>
+                   
+                    <button ion-button color='vlight' class="x4" icon-only (click)="presentActionSheet()">
+                        <ion-icon name="md-attach" color="dark"></ion-icon>
+                      </button>
+                      <P class="label-1">
+                          Attachment(s)
+                      </P>
+                    </ion-item>
+               <ion-item ion-item *ngFor="let item of attchedImages"  block >
+               
+                <ion-avatar item-start>
+                <img  src="{{pathForImage(item.image)}}" />
+                <!-- <img  src="{{item.image}}" /> -->
+            
+               </ion-avatar>
+           
+           
+          
+           
+            <!-- <ion-buttons end> -->
+                <button ion-button color='vlight'  class="x3" icon-only (click)="getListIndex(item)">
+                  <ion-icon name="trash" color="dark"></ion-icon>
+                </button>
+                <h6 class="item-note typec2 x1">
+                    {{item.image}}
+                </h6 >
+
+            </ion-item>
+   
+  
+              <!-- <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null"> -->
+             <!-- <ion-buttons>
+              <button ion-button icon-end block color='light' class='attach-btn' (click)="RemoveAttach()" [hidden]="true">
+                Remove Attachement
+                <ion-icon name="md-trash"></ion-icon>
+                
+              </button>
+
+              </ion-buttons> -->
+              
+             
+      </ion-list>
+</ion-content>
+<ion-footer>
+
+    <button ion-button  color="dark" block (click)="previewleave()">Preview</button>
+   
+</ion-footer>

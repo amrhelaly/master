@@ -1,0 +1,40 @@
+<!--
+  Generated template for the LookUpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons start >
+          <button ion-button (click)="dismiss()" class="close-btn">Close</button>
+        </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+    <ion-list >
+
+        <button ion-item *ngFor="let item of lookUpData;   let i = index "  detail-none  (click)="LookUpTapped($event, item )" >
+        
+       
+          
+            
+             <h2 class="list_item_title1" >{{item.meaning}}</h2>
+            
+   
+  
+  
+      </button>
+  
+  
+  
+      </ion-list>
+
+
+</ion-content>

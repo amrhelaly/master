@@ -1,0 +1,75 @@
+page-leave-details {
+    .typec
+    {
+        margin-left: 0px;
+        font-size: 20px;
+        font-weight: 400;
+    
+    }
+    .dates
+    {
+        margin-left: 12%;
+        font-size: 18px;
+        font-weight: 400;
+    
+    }
+    .typsesc
+    {
+
+        display: inline-block;
+        color: darkgray;
+    }
+    .typsesc2
+    {
+        display: block;
+        padding-left: 5%;
+        color: darkgray;
+        text-align: end;
+    }
+
+    .divider-class1
+{
+
+    font-weight: bold;  
+
+}
+.spiner-1
+{
+margin-left: calc(50% - 14px) !important;
+}
+
+.histroy-name-class
+{
+   // color:darkgray;
+   // float: right;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow:ellipsis;
+  //  max-width:70%;
+   
+}
+
+.histroy-action-class
+{
+    color:darkgray;
+    float: right;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow:ellipsis;
+    max-width:30%;
+    clear: both;
+}
+
+.histroy-note-class
+{
+    color:darkgray;
+    font-size :14px ;
+    white-space: normal;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow:ellipsis;
+}
+
+}

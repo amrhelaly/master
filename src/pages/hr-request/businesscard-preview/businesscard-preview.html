@@ -1,0 +1,124 @@
+<!--
+  Generated template for the BusinesscardPreviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Business Card</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-item-divider color="light"> Please provide the following details</ion-item-divider>
+    <ion-list> 
+        
+      <ion-item >
+          <ion-label floating class="CardTypeId" >Card Type
+            <i class="req-symbol">*</i>
+          </ion-label>
+          <ion-select [(ngModel)]="selectedCardType" interface="action-sheet" (ionChange)="onChange()" >
+            <ion-option *ngFor="let item of CardTypes" [value]="item"> {{item.meaning}} </ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item >
+            <ion-label floating class="language">Language
+              <i class="req-symbol">*</i>
+            </ion-label>
+            <ion-select [(ngModel)]="selecteLanguage" interface="action-sheet" >
+              <ion-option *ngFor="let item of filterLanguages" [value]="item"> {{item.meaning}} </ion-option>
+            </ion-select>
+          </ion-item>
+
+
+          <ion-item  >
+              <ion-label class="englishName" floating>English Name
+                <i class="req-symbol">*</i>
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="englishName">
+              </ion-input>
+            </ion-item>
+
+            <ion-item  >
+                <ion-label  floating>Arabic Name
+                  
+                </ion-label>
+                <ion-input type="text" [(ngModel)]="arbichName">
+                </ion-input>
+              </ion-item>
+
+              <ion-item  >
+                  <ion-label class="enJobTitle" floating>English Job Title
+                    <i class="req-symbol">*</i>
+                  </ion-label>
+                  <ion-input type="text" [(ngModel)]="enJobTitle">
+                  </ion-input>
+                </ion-item>
+
+                <ion-item  >
+                    <ion-label  floating>Arabic Job Title
+                      
+                    </ion-label>
+                    <ion-input type="text" [(ngModel)]="arjobTitle">
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item  >
+                      <ion-label class="officePhone" floating>Office Phone
+                        <i class="req-symbol">*</i>
+                      </ion-label>
+                      <ion-input type="number" [(ngModel)]="officePhone">
+                      </ion-input>
+                    </ion-item>
+
+                    <ion-item  >
+                        <ion-label floating>Ext
+                         
+                        </ion-label>
+                        <ion-input type="number" [(ngModel)]="ext">
+                        </ion-input>
+                      </ion-item>
+
+
+                      <ion-item  >
+                          <ion-label  floating>Office Fax
+                            
+                          </ion-label>
+                          <ion-input type="number" [(ngModel)]="officeFax">
+                          </ion-input>
+                        </ion-item>
+
+
+                        <ion-item  >
+                            <ion-label class="mobile" floating>Mobile
+                              <i class="req-symbol">*</i>
+                            </ion-label>
+                            <ion-input type="number" [(ngModel)]="mobile">
+                            </ion-input>
+                          </ion-item>
+
+
+                          <ion-item  calss="email-block">
+                              <ion-label class="email" floating>Email
+                                <i class="req-symbol">*</i>
+                              </ion-label>
+                               <ion-input readonly='true' type="email" [(ngModel)]="email"> 
+                              
+                              </ion-input>
+                            </ion-item>
+
+
+    
+        </ion-list>
+
+</ion-content>
+<ion-footer>
+ 
+    <button ion-button  color="dark" block (click)="previewRequest()">Preview</button>
+   
+</ion-footer>

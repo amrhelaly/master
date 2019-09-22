@@ -1,0 +1,159 @@
+<!--
+  Generated template for the LeaveDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Leave Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-item-divider color="light"> {{leaveType}}</ion-item-divider>
+  <ion-list>
+
+    <ion-item>
+      <div class="item-note typec">
+
+        Type
+      </div>
+      <div class="item-note typsesc" item-end>
+        {{selectedLeave.absence_category}}
+      </div>
+
+    </ion-item>
+    <ion-item>
+      <div class="item-note typec">
+
+        Date From
+      </div>
+      <div class="item-note typsesc" item-end>
+        {{selectedLeave.start_date}}
+      </div>
+
+    </ion-item>
+    <ion-item>
+      <div class="item-note typec">
+
+          Date To
+      </div>
+      <div class="item-note typsesc" item-end>
+        {{selectedLeave.end_date}}
+      </div>
+
+    </ion-item>
+    <ion-item>
+      <div class="item-note typec">
+
+        Duration
+      </div>
+      <div class="item-note typsesc" item-end>
+        {{selectedLeave.absence_no_days}}
+      </div>
+
+    </ion-item>
+    <ion-item>
+      <div class="item-note typec">
+
+        Return Date      
+      </div>
+      <div class="item-note typsesc" item-end>
+        {{selectedLeave.return_date}}
+      </div>
+
+    </ion-item>
+   
+  <ion-item>
+  <div class="item-note typec">
+
+      Half Day
+  </div>
+  <div class="item-note typsesc" item-end>
+    {{selectedLeave.half_day}}
+  </div>
+
+</ion-item>
+<ion-item>
+    <div class="item-note typec">
+  
+        Replaced by 
+    </div>
+    <div class="item-note typsesc" item-end>
+      {{selectedLeave.replaced_person_name}}
+    </div>
+  
+  </ion-item>
+
+<!-- <ion-item>
+<div class="item-note typec">
+
+    Level of Sickness
+</div>
+<div class="item-note typsesc2" >
+  {{selectedLeave.level_of_sickness}}
+</div>
+
+</ion-item> -->
+
+<ion-item>
+<div class="item-note typec">
+
+    Compassionate Reason
+</div>
+<div class="item-note typsesc2" >
+  {{selectedLeave.compassionate_reason}}
+</div>
+
+</ion-item>
+<ion-item>
+    <div class="item-note typec">
+  
+        Comments
+    </div>
+    <div class="item-note typsesc2" >
+      {{selectedLeave.comments}}
+    </div>
+  
+  </ion-item>
+
+  <ion-item-divider color="light" class="divider-class1" *ngIf="leaveHistory!=null"  item-end> History </ion-item-divider >
+   
+    <ion-spinner name="circles" class="spiner-1"  *ngIf="leaveHistory==null && leaveType=='Pending Leave' " >
+      </ion-spinner>
+   
+  
+    <ion-list  >
+    
+      
+
+    <ion-item *ngFor="let item of leaveHistory"  >
+    
+      
+      <div class="item-note histroy-name-class" >
+          {{item.name}}
+         
+          <span class="histroy-action-class"   >{{item.action}}</span>
+            
+        </div>
+
+        <div class="item-note histroy-note-class" *ngIf="item.note!=null">
+         
+           
+                {{item.note}}
+              
+          </div>
+
+
+      
+    
+    </ion-item>
+  </ion-list>
+
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,75 @@
+<!--
+  Generated template for the NewDelegationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item Id="delegation-type"  *ngIf="mode=='new'">
+            <ion-label>Item Type <i class="req-symbol">*</i></ion-label>
+            <ion-select [(ngModel)]="selecteditemType"  interface="action-sheet" placeholder="Choose Type" >
+           
+                   <ion-option *ngFor="let item of delegationTypes"   [value]="item"> {{item.display_name}}   </ion-option>
+             </ion-select>
+
+          </ion-item>
+
+          <ion-item Id="item-type-txt"  *ngIf="mode=='edit'">
+              <div>Item Type 
+                  <span class="item_txt"  >{{itemType}}</span>
+
+              </div>
+     
+            </ion-item>
+
+          <button ion-item  (click)="personTapped($event)" Id="selected-person">
+              Person <i class="req-symbol">*</i>
+            <span class="button_item_title1"  >{{selectedreplacedPesonName}}</span>
+
+              </button> 
+
+          <ion-item Id="date-from">
+              <ion-label>Start Date <i class="req-symbol">*</i></ion-label>
+              <ion-datetime displayFormat="DDDD, DD-MMM-YYYY"  [(ngModel)]="dateFrom"   placeholder="Date From" (ionChange)="onckeckDate()"></ion-datetime>
+            </ion-item>
+            <ion-item Id="date-to">
+            <ion-label>End Date<i class="req-symbol">*</i> </ion-label>
+            <ion-datetime displayFormat="DDDD, DD-MMM-YYYY" [(ngModel)]="dateTo" placeholder="Date To" (ionChange)="onckeckDate()"></ion-datetime>
+          </ion-item>
+
+         
+
+                 
+            <ion-item>
+                <ion-label>Message</ion-label>
+                
+                </ion-item>
+            <ion-item >
+                <ion-textarea  [(ngModel)]="comments" class="txt-area" (ionChange)="onChange()"></ion-textarea>
+              </ion-item >
+
+
+
+          </ion-list>
+</ion-content>
+<ion-footer class='fotter-container'>
+   <div  *ngIf=" mode=='new' ">
+    <button ion-button  color="dark" block (click)="saveRquest()">Save</button>
+    </div>
+    <div  *ngIf="mode=='edit' ">
+   
+    <button ion-button class='fotter-btn' color="danger"   (click)="deleteRequest()">Delete</button>
+    <button ion-button class='fotter-btn' color="blue" [disabled]='disableUpdate' (click)="updateRquest()">Save Changes </button>
+    </div>
+   
+</ion-footer>

@@ -1,0 +1,89 @@
+page-ntfaction-submit {
+    .txt-area
+    {
+    
+    min-height: 100px;
+    
+    }
+
+    @mixin intial-avatar
+{
+
+
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+.class1
+{
+
+@include intial-avatar;
+    background: orangered;
+
+
+}
+
+
+.class2
+{
+
+background: #928;
+@include intial-avatar;
+
+}
+
+
+.class3
+{
+
+background: #564;
+@include intial-avatar;
+
+}
+
+
+.class4
+{
+
+background: #164;
+@include intial-avatar;
+
+}
+
+
+.class5
+{
+
+background: #964;
+@include intial-avatar;
+
+}
+
+.req-symbol
+{color: red;
+    font-style: normal;
+    font-weight: bold;
+
+}
+.selected-user .item-inner 
+{
+    
+border-color: transparent !important;
+
+}
+
+.error-color {
+    color: red !important;
+}
+.txt-area-label-class
+{
+    padding-left: 20px !important;
+}
+
+
+}

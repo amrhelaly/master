@@ -1,0 +1,24 @@
+[
+{
+los: "Mild",
+test: {
+col4: 4,
+col5: 5,
+col2: 2,
+col3: 3,
+col1: 1
+},
+message: "1"
+},
+{
+los: "Severe",
+test: {
+col4: 4,
+col5: 5,
+col2: 2,
+col3: 3,
+col1: 1
+},
+message: "1"
+}
+]

@@ -1,0 +1,164 @@
+page-login {
+.page-container
+    {
+        
+        
+        background-image: url('../assets/imgs/splash-screen.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+    }
+    
+    .header1{
+       
+        color:  color($colors,primary);
+        font-size: 4em;
+        margin-top: 40%;
+        margin-left: 15%;
+  background-color:transparent;
+border: 0px transparent solid;
+    }
+
+    .user-class
+    {
+       
+       
+        background-color:white;
+        border-color:darkgray;
+        border-width: 1px;
+        border-bottom-width: 0px;
+        border-style: solid;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+     
+    }
+
+    .icon1
+    {
+        
+        
+        font-size: 45px;
+        background-color:transparent;
+   
+    }
+    .pass-class
+    {
+       
+       
+        background-color:white;
+        border-color:darkgrey;
+        border-width: 1px;
+        border-style: solid;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+     
+    }
+
+    .logos
+{
+   // margin-top:10%;
+    height: 80px;
+position: absolute;
+bottom:10px;
+width: 90% !important;
+height: 80px;
+//text-align: center;
+}
+
+.btn1
+{
+
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+
+}
+
+.img1-div{
+    float: left;
+   // background: red;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+}
+
+.img2-div{
+    float: right;
+   // background: green;
+    width: 50% !important;
+    height: 100%;
+    text-align: right;
+}
+
+.img1
+
+{
+background-color:transparent;
+
+
+width:100%;
+ height: 80px;
+
+
+
+}
+
+.img2
+
+{
+background-color:transparent;
+ //margin-left:35%;
+ width:70%;
+ height: 80px;
+ //margin-right:20px;
+
+}
+
+.img3
+
+{
+background-color:transparent;
+z-index: 100;
+
+}
+
+.list1
+{
+    opacity: .7;
+    border-color:white;
+    border-width: 0.1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+
+  .error-color .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: red;
+  }
+
+  .finger-icon
+  {
+      font-size: 60px;
+      color: orange;
+  }
+
+  .finger-btn
+  {
+border-width: 0px;
+text-align: center;
+background: transparent !important;
+height: 90px;
+z-index: 200;
+  }
+  .finger-div
+  {
+    margin-top:10px;
+    text-align: center;
+    
+  }
+
+}

@@ -1,0 +1,50 @@
+page-new-delegation {
+    .button_item_title1
+    {
+    
+        color:darkgray;
+        float: right;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-overflow:ellipsis;
+        max-width:50%;
+        clear: both;
+    }
+
+    .txt-area
+{
+
+min-height: 100px;
+
+}
+.error-color .datetime-md .datetime-placeholder , .error-color .datetime-ios .datetime-placeholder ,
+  .error-color .select-md .select-placeholder  ,  .error-color .button_item_title1
+  ,.error-color .datetime-md .datetime-text ,.error-color .datetime-ios .datetime-text
+  {
+    color: red;
+}
+.item_txt
+{
+    color:darkgray;
+    float: right;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow:ellipsis;
+    max-width:50%;
+    clear: both;
+}
+
+.fotter-btn
+{
+    width:48%;
+
+}
+.fotter-container
+{
+
+    text-align: center;
+}
+
+}

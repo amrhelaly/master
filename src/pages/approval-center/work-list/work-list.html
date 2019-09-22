@@ -1,0 +1,170 @@
+<!--
+  Generated template for the WorkListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton='false'>
+  
+    <ion-title>Inbox</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openDelagtion()">
+        <ion-icon name="swap" color="light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+     
+<ion-content  >
+ 
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing..."></ion-refresher-content>
+      </ion-refresher>
+
+      
+
+  <ion-grid class="xx" >
+      <ion-row justify-content-start align-items-center>
+        <ion-col col-10 >
+          <div >
+            
+              <ion-searchbar  
+              [(ngModel)]="searchItem"
+              [showCancelButton]="shouldShowCancel"
+              animated="true"
+              cancelButtonText="Cancel"
+              showCancelButton="true"
+              placeholder="Search"
+              (ionInput)="onInput($event)"
+              (ionCancel)="onCancel($event)">
+              </ion-searchbar>
+          </div>
+        </ion-col>
+        <ion-col col-2 > 
+          <div class='mm'> 
+              <ion-buttons right>
+            <button ion-button icon-only color="darkgray" outline  [disabled]="test1==null" class="filter-btn" (click)="CustomtfFilter()">
+              <ion-icon name="ios-options" color="{{filterIcon}}" ></ion-icon>
+            </button>
+            </ion-buttons>
+          </div>
+        </ion-col>
+      </ion-row>
+</ion-grid>
+
+
+<div></div>
+
+  <ion-list class="list1">
+
+    <ion-item-sliding *ngFor="let wf of test1;   let i = index "  #itemx  >
+      <button ion-item  detail-none [hidden]="isHidden[i]" (click)="noticationTapped($event, wf )" >
+   
+        <ion-avatar item-start> 
+          <!-- <img [src]="sanitized.bypassSecurityTrustUrl(+'data:image/jpg;base64,'+wf.img)" [hidden]="wf.img==null"/> -->
+          <img src='assets/imgs/avatar.png' [hidden]="wf.from_user!=null" class="avater-img"/>
+          <div class="{{wf.class_name}}" [hidden]="wf.from_user==null"  >  {{wf.intials}} </div>
+         </ion-avatar>
+        
+         <h2 class="list_item_title1" >{{wf.from_user}}</h2>
+        <div class="list_item_sub_block">
+        <div  class="list_item_sub_title2" >{{wf.type}}  </div> 
+         <div class="list_item_sub_title3" >{{wf.begin_date}} </div>
+  </div>
+
+
+        <p class="list_item_sub_title1" >{{wf.subject}}</p>
+       
+   
+       
+  </button>
+
+
+       <ion-item-options class="notification-pannel">
+        <button class="notification-btn1" ion-button color="{{actButtons.button_color}}" *ngFor="let actButtons of wf.base_actions" (click)="morex(itemx,wf,actButtons ,i)" >
+          <ion-icon name="{{actButtons.button_icon}}" class="notification-ico"></ion-icon>
+          {{actButtons.button_label}}
+        </button>
+       </ion-item-options> 
+
+      
+    </ion-item-sliding> 
+
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px"> 
+      <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content> 
+    </ion-infinite-scroll>
+
+
+ <!-- <div [innerHTML]="pp" ></div> -->
+<!--<div Id="ix"> </div>
+<button ion-button block (click)="openMenu()">
+  Show Action Sheet
+</button> -->
+<!-- <canvas #doughnutCanvas ></canvas> -->
+</ion-content>
+<div class="tt" id="search-div" [hidden]='showSearch'>
+  <div class="buttons-div">
+    
+      <div class="mnb2 mnb-left"  >
+          <button ion-button  color="dark"    class="ico-fa-btn1"    (click)="pressFilterButton('HR','hr')" [ngClass]="HRClass" >
+            <fa-icon name="users"  class="aw-ico1" [style.color]="HRIcon"></fa-icon>
+              
+          </button>
+          <h6 ion-text color="dark" class="btn-txt" >HR</h6>
+        </div>
+        <div class="mnb2"  >
+            <button ion-button   color="dark"  class="ico-fa-btn1" (click)="pressFilterButton('Overtime','overtime')" [ngClass]="overtimeClass">
+                <fa-icon name="calendar"  class="aw-ico1" [style.color]="overtimeIcon" ></fa-icon>
+            </button>
+            <h6 ion-text color="dark" class="btn-txt" id="ProfileTxt">Overtime</h6>
+        </div>
+        
+        <div class="mnb2"  >
+            <button ion-button  color="dark"   class="ico-fa-btn1 " (click)="pressFilterButton('Expenses','expenses')"  [ngClass]="expensesClass">
+                <fa-icon name="credit-card"  class="aw-ico1"  [style.color]="expensesIcon"></fa-icon>
+            </button>
+            <h6 ion-text color="dark" class="btn-txt" >Expense </h6>
+        </div>
+
+
+        <div class="mnb2 mnb-left"  >
+            <button ion-button  color="dark"    class="ico-fa-btn1"  (click)="pressFilterButton('Requisitions','requisitions')" [ngClass]="requisitionsClass">
+              <fa-icon name="shopping-cart"  class="aw-ico1" [style.color]="requisitionsIcon"></fa-icon>
+                
+            </button>
+            <h6 ion-text color="dark" class="btn-txt" >Requisition</h6>
+          </div>
+
+          <div class="mnb2"  >
+              <button ion-button   color="dark"  id="po" (click)="pressFilterButton('PO','po')"  [ngClass]="POClass" >
+                  <fa-icon name="truck"  id="po-ico" class="aw-ico1" [style.color]="POIcon"></fa-icon>
+              </button>
+              <h6 ion-text color="dark" class="btn-txt" id="ProfileTxt">PO</h6>
+          </div>
+          
+          <div class="mnb2"  >
+              <button ion-button  color="dark"   (click)="pressFilterButton('Others','others')" id="others"  [ngClass]="othersClass">
+                  <fa-icon name="envelope"  class="aw-ico1" id="others-ico" [style.color]="otherIcon"></fa-icon>
+              </button>
+              <h6 ion-text color="dark" class="btn-txt " >Others </h6>
+          </div>
+          <div class="mnb-close"  >
+              <button ion-button  color="dark"   class="ico-fa-btn2 " (click)="hideFilter()">
+                  <fa-icon name="times"  class="aw-ico1-close"></fa-icon>
+              </button>
+            
+          </div>
+  </div>
+  </div> 

@@ -1,0 +1,61 @@
+<!--
+  Generated template for the NotificationActionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+ 
+  <ion-navbar>
+      <ion-buttons start *ngIf="callingType==1">
+          <button ion-button (click)="dismiss()" class="close-btn">Close</button>
+        </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  
+              
+                <ion-searchbar  
+                [(ngModel)]="searchItem"
+                [showCancelButton]="shouldShowCancel"
+                animated="true"
+                cancelButtonText="Cancel"
+                showCancelButton="true"
+                placeholder="Search"
+                (ionInput)="onInput($event)"
+                (ionCancel)="onCancel($event)">
+                </ion-searchbar>
+        
+         
+
+  <ion-list >
+
+      <button ion-item *ngFor="let user of users;   let i = index "  detail-none  (click)="userTapped($event, user )" >
+      
+     
+          <ion-avatar item-start> 
+          
+            <div class="{{user.class_name}}"   >  {{user.intials}} </div>
+           </ion-avatar>
+          
+           <h2 class="list_item_title1" >{{user.g}}</h2>
+          
+          <div  class="list_item_sub_title2" >{{user.j}}  </div> 
+
+
+    </button>
+
+
+
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" > 
+        <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content> 
+      </ion-infinite-scroll>
+</ion-content>

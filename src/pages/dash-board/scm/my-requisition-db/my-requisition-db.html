@@ -1,0 +1,217 @@
+<!--
+  Generated template for the MyRequisitionDbPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Approved PO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--
+<ion-content > 
+ 
+    <div id="chart_div"></div>
+    <div id="piechart_3d"></div>      
+  
+        <div class="container1">
+                      
+       
+                      <div  class="pa1"> 
+                                <div class="cha1 cha">
+                                  <div class="sub-div sub-div1 sub-div-l">
+                                      <span class="txt-req1"> 
+                                    5
+                                    </span>
+                                    </div>
+
+                                    <div class="sub-div sub-div2 sub-div-l">
+                                        <span class="txt-req3"> 
+                                      Pending
+                                      </span>
+                                      </div>
+
+                                </div>
+                                <div  class="cha2 cha">
+                                    <div class="sub-div sub-div1 sub-div-r">
+                                        <span class="txt-req2"> 
+                                      7
+                                      </span>
+                                        </div>
+
+                                        <div class="sub-div sub-div2 sub-div-r">
+                                            <span class="txt-req3"> 
+                                          In Process
+                                          </span>
+                                            </div>
+                                  </div>
+                    
+
+                                </div> 
+                             
+                  
+
+                              <div class="mid1">
+
+                                
+                                
+
+
+
+
+                                
+                              </div>
+                 <div  class="pa1"> 
+                                <div class="cha1 cha">
+                                  <div class="sub-div sub-div1 sub-div-l">
+                                      <span class="txt-req1"> 
+                                    12
+                                    </span>
+                                    </div>
+
+                                    <div class="sub-div sub-div2 sub-div-l">
+                                        <span class="txt-req3"> 
+                                            Pending Receipt
+                                      </span>
+                                      </div>
+
+                                </div>
+                                <div  class="cha2 cha">
+                                    <div class="sub-div sub-div1 sub-div-r">
+                                        <span class="txt-req2"> 
+                                      123
+                                      </span>
+                                        </div>
+
+                                        <div class="sub-div sub-div2 sub-div-r">
+                                            <span class="txt-req3"> 
+                                          Closed PR
+                                          </span>
+                                            </div>
+                                  </div>
+                      
+                    </div> 
+
+                    <div class="mid1">
+
+                                
+                                
+
+
+
+
+                                
+                      </div>
+
+
+                    <div  class="pa1"> 
+                        <div class="cha1 cha">
+                          <div class="sub-div sub-div1 sub-div-l">
+                              <span class="txt-req1"> 
+                            12
+                            </span>
+                            </div>
+
+                            <div class="sub-div sub-div2 sub-div-l">
+                                <span class="txt-req3"> 
+                                    Pending Receipt
+                              </span>
+                              </div>
+
+                        </div>
+                        <div  class="cha2 cha">
+                            <div class="sub-div sub-div1 sub-div-r">
+                                <span class="txt-req2"> 
+                              123
+                              </span>
+                                </div>
+
+                                <div class="sub-div sub-div2 sub-div-r">
+                                    <span class="txt-req3"> 
+                                  Closed PR
+                                  </span>
+                                    </div>
+                          </div>
+              
+            </div> 
+                  </div>
+ 
+</ion-content>
+-->
+<ion-content>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main-timeline">
+           
+
+                <div class="main-timelinex" *ngFor="let po of poData;   let i = index ">
+                        <div class="timeline" >
+                    <div class="timeline-content">
+                        <span class="timeline-year">
+                                <button ion-button icon-only outline  color='light' class='tm-btn'  (click)="onPoCkicked(i,po)"> {{po.bu_short_name}}</button> 
+                           </span>
+                        <div class="content">
+                            <h3 class="title">{{po.operatin_unit}}</h3>
+                            <p class="description">
+                               {{po.amt}}$
+                            </p>
+                        </div>
+                      
+                      </div>
+
+                      
+                </div>
+                <div [id]="'chart-div'+i" class='grap-div'></div>
+                </div>
+                        
+                <!-- <div *ngFor="let po of poData;   let i = index ">    
+            </div> -->
+
+                <!-- <div class="timeline">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2017</span>
+                        <div class="content">
+                            <h3 class="title">Remaining</h3>
+                            <p class="description">
+                                1,23,456$
+                            </p>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2016</span>
+                        <div class="content">
+                            <h3 class="title">Commited</h3>
+                            <p class="description">
+                                1,23,456$
+                            </p>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class="timeline">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2015</span>
+                        <div class="content">
+                            <h3 class="title">Purchasing</h3>
+                            <p class="description">
+                                1,23,456$
+                            </p>
+                        </div>
+                      </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+  </ion-content>

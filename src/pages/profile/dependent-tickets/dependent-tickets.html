@@ -1,0 +1,52 @@
+<!--
+  Generated template for the DependentTicketsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Dependent Tickets</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <div *ngFor="let item of TicketData" >
+
+      <ion-item-divider color="light" >   {{item.name}}</ion-item-divider>
+
+      <ion-item>
+        <div class="list-name">
+    
+          Relationship
+          <span class="list-value">
+            {{item.relationship}}
+          </span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <div class="list-name">
+    
+           Birthdate
+          <span class="list-value">
+            {{item.date_of_birth}}
+          </span>
+        </div>
+      </ion-item>
+
+
+      <ion-item>
+        <div class="list-name">
+    
+         Payment Start Date
+          <span class="list-value">
+            {{item.effective_payment_date}}
+          </span>
+        </div>
+      </ion-item>
+</div>
+</ion-content>

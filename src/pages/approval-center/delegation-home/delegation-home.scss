@@ -1,0 +1,52 @@
+page-delegation-home {
+
+
+
+    .Active
+{
+    border-left-color:rgb(31, 119, 19) ;
+    border-left-width: 10px  ;
+    border-left-style: solid ;
+    width:100%;
+    margin-top:.5px;
+   
+
+}
+
+.Inactive
+{
+    border-left-color: rgb(128, 128, 128);
+    border-left-width: 10px  ;
+    border-left-style: solid ;
+   margin-top:.5px;
+
+}
+.list-item-title1
+
+{
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    
+}
+
+.list-item-sub-title1
+
+{
+    color: darkgray;
+    font-size: 14px;
+    font-weight: 400;
+    clear: both;
+}
+
+.right
+{
+    float: right;
+}
+
+.left
+{
+    float: left;
+}
+
+}

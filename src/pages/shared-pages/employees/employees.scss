@@ -1,0 +1,131 @@
+page-employees {
+    .searchbar .searchbar-input 
+
+    {
+
+       background: darkgray;
+      color: #000;
+      
+  
+  
+  
+    }
+
+
+.list_item_title1
+
+{
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    
+}
+.list_item_sub_title1
+{
+color: #000;
+font-size: 13px;
+font-weight: 400;
+white-space: normal  ;
+line-height: 1.2em;
+//max-height: 2.4em;
+display: block;
+clear: both;
+
+}
+.xxt
+{
+    max-height: 2.4em;
+    white-space: wrap  ;
+
+}
+.list_item_sub_title2
+{
+color: darkgray;
+font-size: 14px;
+font-weight: 400;
+float: left;
+
+
+}
+
+.list_item_sub_title3
+{
+color: darkgray;
+font-size: 14px;
+font-weight: 400;
+float: right;
+
+
+}
+
+.list_item_sub_block
+{
+    display: block;
+
+}
+
+@mixin intial-avatar
+{
+
+
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+.class1
+{
+
+@include intial-avatar;
+    background: orangered;
+
+
+}
+
+
+.class2
+{
+
+background: #928;
+@include intial-avatar;
+
+}
+
+
+.class3
+{
+
+background: #564;
+@include intial-avatar;
+
+}
+
+
+.class4
+{
+
+background: #164;
+@include intial-avatar;
+
+}
+
+
+.class5
+{
+
+background: #964;
+@include intial-avatar;
+
+}
+
+.close-btn
+{
+    color: #fff;
+}
+
+
+}

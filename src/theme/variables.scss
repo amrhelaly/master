@@ -1,0 +1,130 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+$badge-font-size:                 5rem !default;
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:    #f53d3d,
+  light:      #f4f4f4,
+  vlight:     #ffffff,
+  dark:       #353d4e,
+  green:    #0ac542,
+  blue:    #488aff,
+  red:     #f53d3d,
+  gray:     gray,
+  orange:orange,
+  darkgray :darkgray
+);
+
+//#f53d3d,
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+$fa-font-path: $font-path;
+@import "font-awesome";
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+$toast-md-background:	White;
+$toast-md-title-color: black;
+
+$toast-ios-background:	white;	
+$toast-ios-title-color: darkgray;
+$searchbar-ios-input-search-icon-size:20px;
+$searchbar-md-input-search-icon-size:25px;
+$tabs-ios-tab-text-color-active:#353D4e;
+$tabs-md-tab-text-color-active:#353D4e;
+$tabs-ios-tab-icon-color-active:#353D4e;
+$tabs-md-tab-icon-color-active:#353D4e;
+// old on id 3d354e
+//$navbar-ios-height:5px !default;
+
+//$searchbar-ios-padding-horizontal:0px;
+//$searchbar-ios-padding-vertical:0px;
+//$searchbar-ios-border-color:red;
+//$searchbar-ios-input-height:3.2em;
+
+$grid-padding-width:         0px !default;
+
+$popover-ios-width:100%;
+
+// $popover-ios-min-height:30%;
+// $popover-ios-max-height:30%;
+$popover-ios-background:white;
+
+$popover-md-width:100%;
+// $popover-md-min-height:30%;
+// $popover-md-max-height:30%;
+$popover-white-background:white;
+
+

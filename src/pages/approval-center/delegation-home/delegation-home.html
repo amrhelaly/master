@@ -1,0 +1,61 @@
+<!--
+  Generated template for the DelegationHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Delegation</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="newDelagtion()">
+        <ion-icon name="md-add" color="light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list  >
+        <ion-item-sliding *ngFor="let item of delegationHistory   let i = index "  #itemx  >
+
+      
+        <button ion-item (click)="delegatioTapped($event, item )" block  [ngClass]="item.status"   [hidden]="isHidden[i]" >
+        
+
+
+              <ion-avatar item-start> 
+                 
+                  <div class="{{item.class_name}}"   >  {{item.intials}} </div>
+                 </ion-avatar>
+        
+          <div class="item-note list-item-title1" >
+              {{item.globa_name}}
+            </div> 
+            <div class="item-note list-item-sub-title1" >
+              <span class="left">
+              {{item.begin_date}}
+            </span> 
+            <span class="right">
+                {{item.end_date}}
+              </span> 
+              </div>
+              <div class="item-note list-item-sub-title1" >
+                  {{item.rule_comment}}
+                </div>
+
+               
+        </button>
+        <ion-item-options side="right">
+            <button ion-button color='danger' (click)="deleteRequest(item,i)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+</ion-content>

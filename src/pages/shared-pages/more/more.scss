@@ -1,0 +1,96 @@
+page-more {
+    @mixin   ico
+    {
+//background: green;
+color:#fff;
+
+border-radius: 50%;
+width:40px;
+height:40px;
+
+margin: 0px !important; 
+text-align: center;
+
+
+    }
+
+  .content-ios  .ico1 
+    {
+        @include ico;
+        
+        font-size: 33px;
+        
+        padding-top:5px;
+    }
+
+    .content-md  .ico1 
+    {
+        @include ico;
+        padding-top:8px;
+        font-size: 25px;
+    }
+
+
+    .more-list-text
+    {
+      
+       display: inline-block;
+        margin-top: 0px !important; 
+        padding-top: 0px !important; 
+        
+        padding-left: 10px;
+      
+    }
+    .typec
+    {
+        margin: 0px !important; 
+    }
+    .typec:last-child {
+border-bottom-color: transparent !important;
+
+    }
+
+    .icon_txt
+    {
+        
+    padding-left:10px;        
+    }
+    .ico-color-red
+    {
+        background: red;;
+    }
+
+    .ico-color-green
+    {
+        background: rgb(96, 187, 96);
+    }
+
+    .ico-color-blue1
+    {
+        background: rgb(0, 153, 255);
+    }
+
+    .ico-color-blue2
+    {
+        background: rgb(86, 108, 180);
+    }
+
+
+    .ico-color-blue3
+    {
+        background: rgb(33, 103, 233);
+    }
+
+
+    .ico-color-purple
+    {
+        background: rgb(150, 0, 142);
+       
+    }
+
+
+    .ico-color-orange
+    {
+        background: orangered;
+    }
+}

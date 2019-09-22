@@ -1,0 +1,52 @@
+<ion-content padding class="page-container">
+  <ion-avatar item-start>
+
+  </ion-avatar>
+
+  <ion-list-header class="header1 ">
+
+  </ion-list-header>
+
+  <ion-list class="list1">
+ 
+    <ion-item class="user-class" Id="userId">
+      <ion-icon item-start name="ios-person-outline" class="icon1"></ion-icon>
+      <ion-input type="text" placeholder="Username" [(ngModel)]="user">
+
+      </ion-input>
+    </ion-item>
+    <ion-item class="pass-class" Id="passId">
+      <ion-icon item-start name="ios-unlock-outline" class="icon1"></ion-icon>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="userPass">
+
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+   
+  <button ion-button block color="dark" (click)="login()" class="btn1">Login</button>
+ 
+  
+  <div class='finger-div'  *ngIf="showFingerButton">
+  <button ion-button icon-only outline  color='light' class='finger-btn' (click)="fingerPrinAction()" >
+    <ion-icon name="ios-finger-print" class='finger-icon' icon></ion-icon>
+  </button>
+</div>
+
+<div class='finger-div' *ngIf="showFaceButton">
+  <button ion-button icon-only outline  color='light' class='finger-btn' (click)="fingerPrinAction()" >
+    <!-- <ion-icon name="qr-scanner" class='finger-icon' icon></ion-icon> -->
+    <ion-img src='assets/imgs/face-id.png' class="img3" *ngIf="showFaceButton"> </ion-img>
+  </button>
+</div>
+  <div class="logos">
+    <div class="img1-div">
+    <ion-img src='assets/imgs/mbc-logo.png' class="img1"> </ion-img>
+  </div>
+  <div class="img2-div">
+    <ion-img src='assets/imgs/aa_logos.png' class="img2"> </ion-img>
+  </div>
+  </div>
+ 
+
+</ion-content>

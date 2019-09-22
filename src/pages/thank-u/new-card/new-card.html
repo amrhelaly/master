@@ -1,0 +1,48 @@
+<!--
+  Generated template for the NewCardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div class="icon-div">
+  
+    <fa-icon name="thumbs-up" color="blue" class="thanks-icon"></fa-icon>
+
+    </div>
+    <ion-list >
+
+        <button ion-item *ngFor="let item of subjectData; let i = index"  detail-none class="sub-btn" (click)="subjectTapped($event, item ,i)" >
+
+            
+            <div  class="list_item_sub_title2" [ngClass]="subjectButtons[i]" >{{item.meaning}}  </div> 
+  
+  
+      </button>
+  
+  
+  
+      </ion-list>
+
+      <h6 class="reaming-class" > {{remaingCardText}} </h6 >
+
+      <ion-textarea  [(ngModel)]="thanksComments" placeholder={{placeHolder}} 
+          autocomplete="on" [ngClass]="commentsError" autocorrect="on"  class="txt-area-comm"  maxlength="120"  (ionChange)="onChange()"></ion-textarea>
+
+</ion-content>
+<ion-footer>
+
+    <button ion-button  color="dark" block (click)="sendCard()" [disabled]="selectedSubject==null">Send Card</button>
+   
+</ion-footer>

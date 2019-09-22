@@ -1,0 +1,463 @@
+page-work-list {
+.oo{
+
+   // display: none;
+    opacity: .1;
+   
+    -webkit-transition: all 250ms;
+    transition:all 250ms;
+    -moz-transition:all 250ms;
+   
+
+  //  background-color: yellow;
+}
+
+.oo1{
+
+    display: none;
+    
+   
+
+  //  background-color: yellow;
+}
+
+.notification-btn1
+{
+
+    width: 33% !important;
+    
+}
+
+.notification-pannel
+{
+
+    max-width: 60% !important;
+}
+
+.list-ios .notification-ico
+{
+
+color: white;
+font-size: 40px;
+
+
+}
+
+.list-md .notification-ico
+{
+
+color: white;
+font-size: 22px;
+
+}
+
+
+
+.list_item_title1
+
+{
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    
+}
+.list_item_sub_title1
+{
+color: #000;
+font-size: 13px;
+font-weight: 400;
+white-space: normal  ;
+line-height: 1.2em;
+//max-height: 2.4em;
+display: block;
+clear: both;
+
+}
+.xxt
+{
+    max-height: 2.4em;
+    white-space: wrap  ;
+
+}
+.list_item_sub_title2
+{
+color: darkgray;
+font-size: 14px;
+font-weight: 400;
+float: left;
+
+
+}
+
+.list_item_sub_title3
+{
+color: darkgray;
+font-size: 14px;
+font-weight: 400;
+float: right;
+
+
+}
+
+.list_item_sub_block
+{
+    display: block;
+
+}
+
+.divx
+{
+
+background: orangered;
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+.class1
+{
+
+background: orangered;
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+
+.class2
+{
+
+background: #928;
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+
+.class3
+{
+
+background: #564;
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+
+.class4
+{
+
+background: #164;
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+
+.class5
+{
+
+background: #964;
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+
+.tt
+{
+
+    display: inline-block;
+   
+}
+
+
+.tt1{
+    width: 70%;
+}
+
+.tt2{
+    width: 20%;
+}
+
+.filter-btn
+{
+
+    border-width: 0px;
+    margin: auto !important;
+   // max-height: 3em;
+    // margin-left:15px;
+    // margin-right:15px;
+    
+}
+
+.div-filters
+{
+
+width:19%;
+float: right;
+
+}
+
+.div-search
+{
+
+   float: left;
+    width: 85%;
+}
+.div-search-wrapper
+{
+   
+    display: block;
+}
+.xx{
+
+    background: darkgray;
+    max-height: 3em;
+    margin-left: 0px !important;
+   
+}
+.content-ios .mm{
+
+  //  width: 100%;
+    background-color: #878787;
+    max-height: 3em;
+   // border-width: 1px;
+     //border-color: #3d354e;
+    // border-width: 5px;
+    // border-style: solid;
+}
+
+.content-md .mm{
+
+    //  width: 100%;
+      background-color:transparent;
+     
+      // border-color: #3d354e;
+      // border-width: 5px;
+      // border-style: solid;
+  }
+.tt
+{
+
+    width: 100%;
+    height:100%;
+    position: fixed;
+    display: none;
+   
+    background-color: rgba(0, 0, 0,.3);
+    z-index: 5000;
+}
+
+.buttons-div
+{
+position: absolute;
+bottom: 0px;
+z-index: 6000;
+height: 50%;
+width: 100%;
+background-color: #fff;
+
+
+}
+.searchbar .searchbar-input 
+
+  {
+
+    // border-color:lightgray;
+    // border-width: 1px;
+    // border-style: solid;
+     //box-shadow: 2 2px 2px red; 
+  
+   
+     background: darkgray;
+    color: #000;
+    
+
+
+
+  }
+
+
+
+  .searchbar-md .searchbar-input:-ms-input-placeholder {
+    color:  red !important ;
+  }
+  .list1
+  {
+
+   // background: red;
+    z-index: -1;
+  }
+
+  .tt
+{
+
+    width: 100%;
+    height:100%;
+  //  position: fixed;
+    display: block;
+   background-color: rgba(0, 0, 0,.3);
+   // z-index: 5000;
+}
+
+.block-display
+{
+display: block !important;
+z-index: 10000;
+
+}
+
+.dark-bg
+{
+    background-color: #353D4e !important;
+
+}
+
+.white-ico
+{
+    color: #fff !important;
+}
+.buttons-div
+{
+position: absolute;
+bottom: 0%;
+z-index: 6000;
+height: 55vh;
+width: 100%;
+margin-bottom: 0px;//calc(9.2vh - 1px);
+background-color: #fff;
+ 
+
+
+}
+
+
+
+  .mnb2{
+    height: 25%;
+    width: 25%;
+    display: inline-block;
+    margin-right: 3%;
+    margin-top: 5%;
+ 
+    // cursor: pointer;
+   }
+
+   .mnb-left{
+    margin-left: 11%;
+   }
+   .mnb-close
+   {
+    margin-left: 39%;
+    display: inline-block;
+    height: 25%;
+    width: 25%;
+    margin-top: 2%;
+   
+   }
+   .content-md .mnb-close
+   {
+    margin-top: 1% !important;
+   }
+   .btn-txt
+   {
+       width: 80% !important;
+       white-space: nowrap;
+       overflow-x: hidden;
+       overflow-y: hidden;
+       
+      //padding-right: 15%;
+       font-size: .9em;
+   }
+
+   //
+   .aw-ico1 {
+ font-size: 35px;
+ color: #353D4e;
+    
+   }
+   .aw-ico1-close
+   {
+    font-size: 45px;
+    color: #fff;
+   }
+   .ico-fa-btn1
+   {
+background-color: #fff;
+width: 70px;
+height: 70px;
+       
+       // padding: 0px;
+        border-radius: 50%;
+        border-color: #353D4e;
+        border-width: 1px; 
+        border-style: solid;
+        // border-top-left-radius: 15px;
+        // border-top-right-radius: 15px;
+        // border-bottom-left-radius: 15px;
+        // border-bottom-right-radius: 15px;
+
+       // margin-right: 2%;
+        //padding-top: 10%; 
+        //padding-bottom: 10%; 
+
+   }
+
+   .ico-fa-btn2
+   {
+background-color: #353D4e;
+width: 70px;
+height: 70px;
+       
+       // padding: 0px;
+        border-radius: 50%;
+        // border-color: #3d354e;
+        // border-width: 1px; 
+        // border-style: solid;
+   }
+
+   .gg
+   {
+       transition: all 500ms;
+    -ms-transform: rotatey(180deg); /* IE 9 */
+    -webkit-transform: rotatey(180deg); /* Safari */
+    transform: rotatey(180deg);
+   }
+   .avater-img
+   {
+    height: 40px !important;
+    width: 40px!important;
+    // border-color: gray;
+    // border-width: 1px;
+    // border-style: solid;
+    // border-radius: 50%;
+   }
+
+//$searchbar-ios-input-search-icon-size:70px;
+//$searchbar-ios-input-background-color:red;
+//$searchbar-md-input-background-color:red;
+}

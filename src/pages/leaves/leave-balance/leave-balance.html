@@ -1,0 +1,86 @@
+<!--
+  Generated template for the LeaveBalancePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Leave Balance</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <!-- <div id="chart-container">
+    <canvas baseChart 
+            [chartType]="chartType"
+            [data]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions">
+    </canvas>
+</div>
+
+    <canvas #doughnutCanvas style="height:60vh; width:80vw"></canvas>
+    <canvas id="pieChart" width=200 height=200></canvas> -->
+  <ion-segment [(ngModel)]="seg">
+    <ion-segment-button value="Annual">
+      Annual
+    </ion-segment-button>
+    <ion-segment-button value="TOIL" *ngIf="toilTabdisplayed">
+      TOIL
+    </ion-segment-button>
+
+  </ion-segment>
+
+
+  <div [ngSwitch]="seg">
+    <ion-list *ngSwitchCase="'Annual'">
+   
+      <div *ngIf="isdisplayed" style="display: block">
+          <canvas style="height:60vh; width:80vw" baseChart
+                      [data]="doughnutChartvaluesAnuual"
+                      [colors]="doughnutChartColors"
+                      [labels]="doughnutChartLabelsAnuual"
+                      [chartType]="doughnutChartType"
+                      [options]="chartOptions"
+                      >
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"
+                    
+                    </canvas>
+      
+        </div> 
+
+      
+
+     
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'TOIL'">
+        
+        <div *ngIf="isdisplayedt"  style="display: block">
+            <canvas style="height:60vh; width:80vw" baseChart
+                        [data]="doughnutChartvaluesToil"
+                        [colors]="doughnutChartColors"
+                        [labels]="doughnutChartLabelsToil"
+                        [chartType]="doughnutChartType"
+                        [options]="chartOptions">
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"
+                      
+                      </canvas>
+        
+          </div>
+    </ion-list>
+
+ 
+  </div>
+
+
+
+</ion-content>

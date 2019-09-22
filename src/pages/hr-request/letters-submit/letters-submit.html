@@ -1,0 +1,135 @@
+<!--
+  Generated template for the LettersSubmitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Submit Request</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+
+    
+        <ion-item-divider color="light"> Request details</ion-item-divider>
+        <ion-list>
+      
+          <ion-item>
+            <div class="typec">
+      
+              Letter Type
+              <span class=" typsesc" >
+                  {{selectedLetterType.letter_type}}
+                </span>
+            </div>
+          
+      
+          </ion-item>
+
+          <ion-item *ngIf="UAEsegmnets" >
+            <div class=" typec">
+      
+                Company/Consulate/Bank/TECOM
+                <span class="typsesc"  >
+                    {{cbt}}
+                </span>
+            </div>
+           
+      
+          </ion-item>
+
+          <ion-item *ngIf="otherSegmnts">
+            <div class=" typec">
+      
+                Company/Consulate/Bank
+                <span class="typsesc"  >
+                    {{cb}}
+                </span>
+            </div>
+
+
+           
+      
+          </ion-item>
+
+          <ion-item *ngIf="UAEsegmnets || otherSegmnts" >
+            <div class="item-note typec">
+      
+                Travel Destination
+                <span class="typsesc" >
+                    {{TravelDestination}}
+                  </span>
+            </div>
+            
+      
+          </ion-item>
+          
+         
+        <ion-item *ngIf="UAEsegmnets">
+        <div class="item-note typec">
+      
+            Salary Update in TECOM
+        </div>
+        <div class="item-note typsesc" item-end>
+          
+          {{selectedTecomUpdateSalaryType}}
+        </div>
+      
+      </ion-item>
+
+
+      <ion-item *ngIf="KSAsegments">
+        <div class="item-note typec">
+  
+          Letter To (Line 1)
+            <span class="typsesc" >
+                {{lt1}}
+              </span>
+        </div>
+</ion-item>
+
+        <ion-item *ngIf="KSAsegments">
+          <div class="item-note typec">
+    
+            Letter To (Line 2)
+              <span class="typsesc" >
+                  {{lt2}}
+                </span>
+          </div>
+      </ion-item>
+     
+      </ion-list>
+
+      <ion-item-divider color="light"   item-end>Approvers</ion-item-divider >
+        <ion-list  >
+
+      <ion-item ion-item *ngFor="let item of approverList"  block >
+          
+            
+      
+           
+            <ion-avatar item-start>
+               <img [src]="_DomSanitizer.bypassSecurityTrustUrl(+'data:image/jpg;base64,'+item.imge)" [hidden]="item.imge==null" />
+               <div class="divx" [hidden]="item.imge!=null"  >  {{item.intials}} </div>
+              </ion-avatar>
+              <h2 class="item-note typec2">
+            {{item.display_name}}
+            </h2 >
+          <!-- </div> -->
+        <p class="item-note dates2" >
+          {{item.job_title}}
+        </p>
+
+      </ion-item>
+    </ion-list>
+
+</ion-content>
+<ion-footer>
+
+    <button ion-button  color="dark" block (click)="submitRerquest()">Submit</button>
+   
+</ion-footer>

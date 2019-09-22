@@ -1,0 +1,218 @@
+page-main {
+
+
+  .main-happiness-container
+{
+
+    position:absolute;
+    width: 100%;
+    //height:100% !important;
+  
+//z-index: 1;
+
+  //bottom: calc(9.2vh - 1px);
+  bottom:0px;
+   
+    background-color: rgba(0, 0, 0,.3)!important;
+
+    overflow-y: scroll !important;
+
+}
+.smiles-div
+{
+position: absolute;
+bottom: 1px ;
+z-index: 1;
+height:55vh;
+width: 100%;
+
+//margin-bottom: 10vh;
+background-color: #fff;
+border-top-color: red;
+border-top-style: solid;
+border-top-width: 4px;
+//margin-bottom:calc(9vh - 1px) !important;
+
+//opacity:0;
+//transition:  300ms;
+//padding-bottom: 0!important;
+
+
+}
+.red-line
+{
+height: 0px;
+width: 100%;
+background: #353D4e;
+}
+
+.short-elemnt{
+  height: 0px !important;
+
+
+}
+
+.leng-elemnt{
+  height: 100% !important;
+  
+}
+
+.smile-div-container 
+{
+  height: 170px !important;
+ 
+
+}
+
+
+  .ico-div{
+    height: 25%;
+    width: 25%;
+    display: inline-block;
+    margin-right: 3%;
+    margin-top: 5%;
+ 
+  
+   }
+
+   .ico-div-left{
+    margin-left: 11%;
+   }
+
+
+
+   //
+   .smile-ico1 {
+ font-size: 82px;
+ color: #353D4e;
+
+    
+   }
+
+   .smile-fa-btn1
+   {
+//background-color: yellow !important;
+
+
+border-width: 0px;
+
+border-radius: 50%;
+width: 70px;
+height: 70px;
+
+
+
+   }
+
+   .smile-text
+   {
+font-size: 25px;
+color: #000;
+text-align: center;
+margin-top: 15px;
+
+   }
+
+   .btn-rotate
+   {
+       transition: all 500ms;
+    -ms-transform: rotatey(180deg); 
+    -webkit-transform: rotatey(180deg); 
+    transform: rotatey(180deg);
+  
+   }
+
+   .dark-bg
+{
+    background-color: #353D4e !important;
+    border-radius: 50%;
+    border-color: #353D4e;
+    border-width: 8px; 
+    border-style: solid;
+}
+
+.txt-area-h
+{
+
+min-height: 100px;
+width: calc(100% - 40px) !important;
+border-color: #353D4e;
+    border-width: 1px; 
+    border-style: solid;
+    margin-top: 10px;
+    border-radius: 7px;
+    margin-left:20px;
+    margin-left:20px;
+    padding-top:1px!important;
+    padding: 5px;
+
+
+
+}
+
+.txt-area-h .text-input-md
+{
+  min-height: 100px;
+  margin: 0px !important;
+}
+
+
+.send-div
+{
+float: right;
+margin-right: 20px;
+margin-top: 2px;
+
+}
+
+.send-btn1
+{
+width:85px;
+height: 28px !important;
+border-radius: 25px;
+
+
+}
+
+.up-class
+{
+ // margin-bottom: 300px;
+ bottom: 250px;
+}
+
+.tab-class1 .ion-ios-happy-outline:before , .tab-class1 .ion-md-happy:before
+{
+  color: #353D4e;
+}
+
+.tabbar 
+{
+ // height:9.2vh !important;
+ // height:10%!important;
+ // z-index: 99 !important;
+
+}
+
+.sxxp
+{
+  //height: 100vh !important;
+  //margin-bottom: 0px !important;
+  //margin-top: 0px !important;
+  overflow: hidden !important;
+}
+.fixed-contentx
+{
+  height: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.scroll-content
+{
+ /// height: 0px !important;
+  //margin-top: 0px !important;
+  //margin-bottom: 0px !important;
+  //box-sizing:'';
+  //overflow: hidden !important;
+}
+}

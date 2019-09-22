@@ -1,0 +1,111 @@
+<!--
+  Generated template for the NotificationDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Notification Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+   
+  <div
+    [innerHTML]="notificationBody" >
+  </div>
+
+  <ion-item-divider color="light" class="divider-class1" *ngIf="ntfAttributes!=null"  item-end> Response </ion-item-divider >
+
+  
+
+    <ion-item  *ngFor="let item of ntfAttributesText;   let i = index">
+        <ion-label floating>{{item.display_name}}
+        
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="ntfAttributesTextValues[i]">
+        </ion-input>
+      </ion-item>
+
+      <ion-item  *ngFor="let item of ntfAttributesNumber;   let i = index">
+          <ion-label floating>{{item.display_name}}
+          
+          </ion-label>
+          <ion-input type="number" [(ngModel)]="ntfAttributesNumberValues[i]">
+          </ion-input>
+        </ion-item>
+
+        
+        <button ion-item  *ngFor="let item of ntfAttributesRoles;   let i = index" (click)="roleTapped($event, item  , i)" >
+          {{item.display_name}}
+            
+
+        
+          
+         
+            
+             <span class="button_item_title1"  *ngIf="ntfAttributesRolesValues[i]!=null" >{{ntfAttributesRolesValues[i].g}}</span>
+            
+          
+            
+          </button>
+          
+
+          <button ion-item  *ngFor="let item of ntfAttributeslookUp;   let i = index" (click)="lookUpTapped($event, item  , i)" >
+              {{item.display_name}}
+              
+              <span class="button_item_title1"  *ngIf="ntfAttributeslookUpValues[i]!=null" >{{ntfAttributeslookUpValues[i].meaning}}</span>
+            </button>
+
+
+  <ion-item-divider color="light" class="divider-class1" *ngIf="NotificationHistory!=null"  item-end> History </ion-item-divider >
+   
+    <ion-spinner name="circles" class="spiner-1"  *ngIf="NotificationHistory==null" >
+      </ion-spinner>
+   
+  
+    <ion-list  >
+    
+      
+
+    <ion-item *ngFor="let item of NotificationHistory"  >
+    
+      
+      <div class="item-note histroy-name-class" >
+          {{item.name}}
+         
+          <span class="histroy-action-class"   >{{item.action}}</span>
+            
+        </div>
+
+        <div class="item-note histroy-note-class" *ngIf="item.note!=null">
+         
+           
+                {{item.note}}
+              
+          </div>
+
+
+      
+    
+    </ion-item>
+  </ion-list>
+ 
+</ion-content>
+<ion-footer class="page_footer">
+  
+  
+<div class="div_footer">
+
+  <button class="notification-btn1" ion-button icon-right color="{{actButtons.button_color}}" *ngFor="let actButtons of baseActions2.slice().reverse() " (click)="morex(actButtons)" >
+    {{actButtons.button_label}}
+  
+    
+  </button>
+
+  </div>
+</ion-footer>

@@ -1,0 +1,74 @@
+page-scm-dashboard {
+    .act-icon
+    {
+        font-size: 30px;
+        color:#353d4e;
+    }
+  
+    .act-btn
+    {
+ border-width: 0px;
+  text-align: center;
+  background: transparent !important;
+ // height: 90px;
+  z-index: 200;
+  display: inline-block;
+ // width:20px;
+    }
+    .containerz   
+    {
+
+        width: 100vw;
+        display: block;
+        text-align: center;
+        height: 60px;
+       // border-bottom: 1px red solid;
+       
+
+    }
+
+    .backz , .datez,.nextz
+    {
+display: inline-block;
+
+
+
+    } 
+
+    .backz 
+    {
+width:20%;
+float: left;
+
+    }
+
+    .datez 
+    {
+width:60%;
+padding-top:5px;
+font-size: 20px;
+text-align: center;
+
+
+
+    }
+    .datezx
+    {
+        color :#fff;
+    }
+
+    .nextz 
+    {
+width:20%;
+float: right;
+
+    }
+.containerx
+{
+
+    //background-color: red;
+   // height:500px !important;
+    display: block;
+    //border: 1px red solid;
+}
+}

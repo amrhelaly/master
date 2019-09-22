@@ -1,0 +1,46 @@
+<!--
+  Generated template for the BankInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Bank Info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing..."></ion-refresher-content>
+      </ion-refresher>
+
+      <ion-list  >
+          <button ion-item *ngFor="let item of banks" (click)="bankTapped($event, item )" block >
+          
+       
+
+                <ion-avatar item-start> 
+                   
+                    <div class="divx"   >  {{item.priority}} </div>
+                   </ion-avatar>
+          
+            <div class="item-note list-item-title1" >
+                {{item.bank_name}}
+              </div> 
+              <div class="item-note list-item-sub-title1" >
+                  {{item.bank_branch}}
+                </div>
+                <div class="item-note list-item-sub-title1" >
+                    {{item.iban}}
+                  </div>
+          </button>
+        </ion-list>
+
+</ion-content>

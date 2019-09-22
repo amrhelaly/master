@@ -1,0 +1,87 @@
+<!--
+  Generated template for the MorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>More</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+
+    <ion-list  >
+
+        <button ion-item block disabled='true'>
+            <ion-avatar item-start> 
+              <ion-icon  name="information" item-start class="ico1 ico-color-purple"></ion-icon>
+              </ion-avatar>
+        <!-- <span class="more-list-text">
+              About Easy Access
+        </span> -->
+        <h2   class="icon_txt" > About APP</h2>
+        </button>
+
+        <button ion-item block class="item-note typec" disabled='true'>
+            <ion-avatar item-start> 
+                  <ion-icon  name="call" item-start class="ico1 ico-color-blue1 "></ion-icon>
+                  </ion-avatar>
+              
+               <h2  > Contact Us</h2>
+                
+            </button>
+
+            <button ion-item block class="item-note typec" disabled='true'>
+                <ion-avatar item-start> 
+                      <ion-icon  name="lock" item-start class="ico1 ico-color-green "></ion-icon>
+                  </ion-avatar>
+                   <h2  >  Privacy Policy</h2>
+                    
+                </button>
+
+
+            <ion-item block class="item-note typec">
+                <ion-avatar item-start> 
+                      <ion-icon  name="notifications" item-start class="ico1 ico-color-blue2 "></ion-icon>
+                     </ion-avatar>
+                      
+                      <ion-label >Notifications</ion-label>
+                      <ion-toggle disabled='true' color="dark"></ion-toggle>
+                </ion-item>
+
+                <ion-item  >
+                    <ion-avatar item-start> 
+                          <ion-icon  name="finger-print" item-start class="ico1 ico-color-orange"></ion-icon>
+                     </ion-avatar>
+                      
+                       <ion-label >Touch ID</ion-label>
+                       <ion-toggle  disabled='true' color="dark" item-end></ion-toggle>
+                    </ion-item>
+
+
+                    <button ion-item block detail-none disabled='true'>
+                        <ion-avatar item-start> 
+                              <ion-icon  name="md-share" item-start class="ico1 ico-color-blue3 "></ion-icon>
+                           </ion-avatar>
+                           <h2  > Share App</h2>
+                          
+                        </button>
+
+                        <button ion-item block detail-none class="item-note typec" (click)="logOut()">
+                            <ion-avatar item-start> 
+                                  <ion-icon  name="power" item-start class="ico1 ico-color-red "></ion-icon>
+                             </ion-avatar>
+                              <h2  >  Logout</h2>
+                             
+                            </button>
+
+
+      </ion-list>
+
+</ion-content>

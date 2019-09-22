@@ -1,0 +1,747 @@
+<!--
+  Generated template for the EmployeeAdressessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Employee Address</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-item-divider color="light" *ngIf="primaryAdrress!=null"> Primary Address</ion-item-divider>
+  <div *ngFor="let item of primaryAdrress">
+    <!-- UAE  -->
+    <div *ngIf="UAE">
+      <ion-item>
+        <div class="list-name">
+
+          Country
+          <span class="list-value">
+            {{item.country}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+
+          Emirate
+          <span class="list-value">
+            {{item.emirate}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+
+          Address Line1
+          <span class="list-value">
+            {{item.address_line1}}
+          </span>
+        </div>
+      </ion-item>
+
+
+      <ion-item>
+        <div class="list-name">
+
+          Address Line2
+          <span class="list-value">
+            {{item.address_line2}}
+          </span>
+        </div>
+      </ion-item>
+
+
+
+      <ion-item>
+        <div class="list-name">
+
+          Street
+          <span class="list-value">
+            {{item.street}}
+          </span>
+        </div>
+      </ion-item>
+
+     
+
+      <ion-item>
+        <div class="list-name">
+
+          PO Box
+          <span class="list-value">
+            {{item.po_box}}
+          </span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <div class="list-name">
+
+          Building
+          <span class="list-value">
+            {{item.building}}
+          </span>
+        </div>
+      </ion-item>
+
+    </div>
+     <!-- End UAE  -->
+ <!-- KSA  -->
+ <div *ngIf="KSA">
+    <ion-item>
+      <div class="list-name">
+
+        Country
+        <span class="list-value">
+          {{item.country}}
+        </span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <div class="list-name">
+
+          Area
+        <span class="list-value">
+          {{item.area}}
+        </span>
+      </div>
+    </ion-item>
+    <ion-item>
+      <div class="list-name">
+
+        Address Line1
+        <span class="list-value">
+          {{item.address_line1}}
+        </span>
+      </div>
+    </ion-item>
+
+
+    <ion-item>
+      <div class="list-name">
+
+        Address Line2
+        <span class="list-value">
+          {{item.address_line2}}
+        </span>
+      </div>
+    </ion-item>
+
+    <ion-item>
+        <div class="list-name">
+  
+          City
+          <span class="list-value">
+            {{item.city}}
+          </span>
+        </div>
+      </ion-item>
+
+    <ion-item>
+      <div class="list-name">
+
+        Street
+        <span class="list-value">
+          {{item.street}}
+        </span>
+      </div>
+    </ion-item>
+
+
+
+
+    <ion-item>
+      <div class="list-name">
+
+        PO Box
+        <span class="list-value">
+          {{item.po_box}}
+        </span>
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div class="list-name">
+
+          Postal Code
+        <span class="list-value">
+          {{item.postal_code}}
+        </span>
+      </div>
+    </ion-item>
+
+  </div>
+
+   <!-- Egypt & Lebabon  -->
+   <div *ngIf="EGYPT_Lebanon">
+      <ion-item>
+        <div class="list-name">
+
+          Country
+          <span class="list-value">
+            {{item.country}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+
+            City/Town
+          <span class="list-value">
+            {{item.town_or_city}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+
+          Address Line1
+          <span class="list-value">
+            {{item.address_line1}}
+          </span>
+        </div>
+      </ion-item>
+
+
+      <ion-item>
+        <div class="list-name">
+
+          Address Line2
+          <span class="list-value">
+            {{item.address_line2}}
+          </span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+          <div class="list-name">
+  
+            Address Line3
+            <span class="list-value">
+              {{item.address_line3}}
+            </span>
+          </div>
+        </ion-item>
+
+
+      <ion-item>
+        <div class="list-name">
+
+            Region 1
+          <span class="list-value">
+            {{item.region_1}}
+          </span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+          <div class="list-name">
+  
+              Region 2
+            <span class="list-value">
+              {{item.region_2}}
+            </span>
+          </div>
+        </ion-item>
+
+        <ion-item>
+            <div class="list-name">
+    
+                Region 3
+              <span class="list-value">
+                {{item.region_3}}
+              </span>
+            </div>
+          </ion-item>
+
+     
+
+
+      <ion-item>
+        <div class="list-name">
+
+            
+          Postal Code
+          <span class="list-value">
+            {{item.postal_code}}
+          </span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <div class="list-name">
+
+            Telephone Number 1
+          <span class="list-value">
+            {{item.telephone_number_1}}
+          </span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+          <div class="list-name">
+  
+              Telephone Number 2
+            <span class="list-value">
+              {{item.telephone_number_2}}
+            </span>
+          </div>
+        </ion-item>
+
+    </div>
+   <!-- END Egypt & Lebabon  -->
+
+   <!-- Jordan -->
+   <div *ngIf="JORDON">
+      <ion-item>
+        <div class="list-name">
+
+            Governorate
+          <span class="list-value">
+            {{item.Governorate}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+
+            City English
+          <span class="list-value">
+            {{item.City_English}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+
+            City Arabic
+          <span class="list-value">
+            {{item.City_arabic}}
+          </span>
+        </div>
+      </ion-item>
+
+
+      <ion-item>
+        <div class="list-name">
+
+            Street English
+          <span class="list-value">
+            {{item.Street_English}}
+          </span>
+        </div>
+      </ion-item>
+
+
+
+      <ion-item>
+        <div class="list-name">
+
+            Street Arabic
+          <span class="list-value">
+            {{item.Street_Arabic}}
+          </span>
+        </div>
+      </ion-item>
+
+     
+
+      <ion-item>
+        <div class="list-name">
+
+          PO Box
+          <span class="list-value">
+            {{item.po_box}}
+          </span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <div class="list-name">
+
+            phone
+          <span class="list-value">
+            {{item.phone}}
+          </span>
+        </div>
+      </ion-item>
+
+    </div>
+     <!-- End Jordan  -->
+
+
+  </div>
+  
+  <div *ngFor="let item of nonPrimaryAdrress;  let i = index">
+      <ion-item-divider color="light" > Other Address ({{i+1}})</ion-item-divider>
+          <!-- UAE  -->
+    <div *ngIf="UAE">
+        <ion-item>
+          <div class="list-name">
+  
+            Country
+            <span class="list-value">
+              {{item.country}}
+            </span>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="list-name">
+  
+            Emirate
+            <span class="list-value">
+              {{item.emirate}}
+            </span>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="list-name">
+  
+            Address Line1
+            <span class="list-value">
+              {{item.address_line1}}
+            </span>
+          </div>
+        </ion-item>
+  
+  
+        <ion-item>
+          <div class="list-name">
+  
+            Address Line2
+            <span class="list-value">
+              {{item.address_line2}}
+            </span>
+          </div>
+        </ion-item>
+  
+  
+  
+        <ion-item>
+          <div class="list-name">
+  
+            Street
+            <span class="list-value">
+              {{item.street}}
+            </span>
+          </div>
+        </ion-item>
+  
+       
+  
+        <ion-item>
+          <div class="list-name">
+  
+            PO Box
+            <span class="list-value">
+              {{item.po_box}}
+            </span>
+          </div>
+        </ion-item>
+  
+        <ion-item>
+          <div class="list-name">
+  
+            Building
+            <span class="list-value">
+              {{item.building}}
+            </span>
+          </div>
+        </ion-item>
+  
+      </div>
+       <!-- End UAE  -->
+   <!-- KSA  -->
+   <div *ngIf="KSA">
+      <ion-item>
+        <div class="list-name">
+  
+          Country
+          <span class="list-value">
+            {{item.country}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+  
+            Area
+          <span class="list-value">
+            {{item.area}}
+          </span>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="list-name">
+  
+          Address Line1
+          <span class="list-value">
+            {{item.address_line1}}
+          </span>
+        </div>
+      </ion-item>
+  
+  
+      <ion-item>
+        <div class="list-name">
+  
+          Address Line2
+          <span class="list-value">
+            {{item.address_line2}}
+          </span>
+        </div>
+      </ion-item>
+  
+      <ion-item>
+          <div class="list-name">
+    
+            City
+            <span class="list-value">
+              {{item.city}}
+            </span>
+          </div>
+        </ion-item>
+  
+      <ion-item>
+        <div class="list-name">
+  
+          Street
+          <span class="list-value">
+            {{item.street}}
+          </span>
+        </div>
+      </ion-item>
+  
+  
+  
+  
+      <ion-item>
+        <div class="list-name">
+  
+          PO Box
+          <span class="list-value">
+            {{item.po_box}}
+          </span>
+        </div>
+      </ion-item>
+  
+      <ion-item>
+        <div class="list-name">
+  
+            Postal Code
+          <span class="list-value">
+            {{item.postal_code}}
+          </span>
+        </div>
+      </ion-item>
+  
+    </div>
+  
+     <!-- Egypt & Lebabon  -->
+     <div *ngIf="EGYPT_Lebanon">
+        <ion-item>
+          <div class="list-name">
+  
+            Country
+            <span class="list-value">
+              {{item.country}}
+            </span>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="list-name">
+  
+              City/Town
+            <span class="list-value">
+              {{item.town_or_city}}
+            </span>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="list-name">
+  
+            Address Line1
+            <span class="list-value">
+              {{item.address_line1}}
+            </span>
+          </div>
+        </ion-item>
+  
+  
+        <ion-item>
+          <div class="list-name">
+  
+            Address Line2
+            <span class="list-value">
+              {{item.address_line2}}
+            </span>
+          </div>
+        </ion-item>
+  
+        <ion-item>
+            <div class="list-name">
+    
+              Address Line3
+              <span class="list-value">
+                {{item.address_line3}}
+              </span>
+            </div>
+          </ion-item>
+  
+  
+        <ion-item>
+          <div class="list-name">
+  
+              Region 1
+            <span class="list-value">
+              {{item.region_1}}
+            </span>
+          </div>
+        </ion-item>
+  
+        <ion-item>
+            <div class="list-name">
+    
+                Region 2
+              <span class="list-value">
+                {{item.region_2}}
+              </span>
+            </div>
+          </ion-item>
+  
+          <ion-item>
+              <div class="list-name">
+      
+                  Region 3
+                <span class="list-value">
+                  {{item.region_3}}
+                </span>
+              </div>
+            </ion-item>
+  
+       
+  
+  
+        <ion-item>
+          <div class="list-name">
+  
+              
+            Postal Code
+            <span class="list-value">
+              {{item.postal_code}}
+            </span>
+          </div>
+        </ion-item>
+  
+        <ion-item>
+          <div class="list-name">
+  
+              Telephone Number 1
+            <span class="list-value">
+              {{item.telephone_number_1}}
+            </span>
+          </div>
+        </ion-item>
+  
+        <ion-item>
+            <div class="list-name">
+    
+                Telephone Number 2
+              <span class="list-value">
+                {{item.telephone_number_2}}
+              </span>
+            </div>
+          </ion-item>
+  
+      </div>
+     <!-- END Egypt & Lebabon  -->
+  
+     <!-- Jordan -->
+     <div *ngIf="JORDON">
+        <ion-item>
+          <div class="list-name">
+  
+              Governorate
+            <span class="list-value">
+              {{item.Governorate}}
+            </span>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="list-name">
+  
+              City English
+            <span class="list-value">
+              {{item.City_English}}
+            </span>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="list-name">
+  
+              City Arabic
+            <span class="list-value">
+              {{item.City_arabic}}
+            </span>
+          </div>
+        </ion-item>
+  
+  
+        <ion-item>
+          <div class="list-name">
+  
+              Street English
+            <span class="list-value">
+              {{item.Street_English}}
+            </span>
+          </div>
+        </ion-item>
+  
+  
+  
+        <ion-item>
+          <div class="list-name">
+  
+              Street Arabic
+            <span class="list-value">
+              {{item.Street_Arabic}}
+            </span>
+          </div>
+        </ion-item>
+  
+       
+  
+        <ion-item>
+          <div class="list-name">
+  
+            PO Box
+            <span class="list-value">
+              {{item.po_box}}
+            </span>
+          </div>
+        </ion-item>
+  
+        <ion-item>
+          <div class="list-name">
+  
+              phone
+            <span class="list-value">
+              {{item.phone}}
+            </span>
+          </div>
+        </ion-item>
+  
+      </div>
+       <!-- End Jordan  -->
+  
+    
+  </div>
+</ion-content>

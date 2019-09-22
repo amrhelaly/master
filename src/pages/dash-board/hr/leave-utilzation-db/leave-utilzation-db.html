@@ -1,0 +1,73 @@
+<!--
+  Generated template for the LeaveUtilzationDbPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <!-- <ion-title>Leave Utilzation</ion-title> -->
+
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <div id="timeline-wrap">
+        <div id="timeline"></div>
+        
+        <!-- This is the individual marker-->
+        <div class="marker mfirst timeline-icon one" [ngClass]="allClass">
+            <!-- <i class="fa fa-pencil"></i> -->
+            <button ion-button icon-only outline  color='light' class='tm-btn'  (click)="onAllClicked()">
+            <i   class="time-line-in-txt"> All</i>
+            </button>
+        </div>
+        <!-- / marker -->
+      
+        <!-- This is the individual marker-->
+        <div class="marker m2 timeline-icon two" [ngClass]="DXBclass">
+            <button ion-button icon-only outline  color='light' class='tm-btn' (click)="onHrClicked()">
+            <i   class="time-line-in-txt"> DXB</i>
+            </button>
+        </div>
+        <!-- / marker -->
+      
+          <!-- This is the individual panel-->
+        <!-- <div class="timeline-panel">
+          <p>text</p>
+        </div> -->
+        <!-- / panel -->
+        
+        <!-- This is the individual marker-->
+        <div class="marker m3 timeline-icon three">
+            <i   class="time-line-in-txt"> KSA</i>
+        </div>
+        <!-- / marker -->
+      
+        
+        <!-- This is the individual marker-->
+        <div class="marker m4 timeline-icon four">
+            <i   class="time-line-in-txt"> LEB</i>
+        </div>
+        <!-- / marker -->
+
+        <!-- This is the individual marker-->
+        <div class="marker m5 timeline-icon four">
+            <i   class="time-line-in-txt"> EG</i>
+          </div>
+          <!-- / marker -->
+
+          <!-- This is the individual marker-->
+        <div class="marker mlast timeline-icon four">
+            <i   class="time-line-in-txt"> Jo</i>
+          </div>
+          <!-- / marker -->
+      
+      
+       
+      </div>
+</ion-content>

@@ -1,0 +1,89 @@
+<!--
+  Generated template for the LettersPreviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Letters</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item-divider color="light"> Please provide the following details</ion-item-divider>
+  <ion-list> 
+    <ion-item Id="letterTypeIdx">
+      <ion-label floating class="letterTypeId">Letter Type
+        <i class="req-symbol">*</i>
+      </ion-label>
+      <ion-select [(ngModel)]="selectedLetterType" class="select-1" interface="action-sheet" >
+        <ion-option *ngFor="let item of letterTypes" [value]="item"> {{item.letter_type}} </ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item *ngIf="UAEsegmnets" >
+      <ion-label class="cbt" floating>Company/Consulate/Bank/TECOM
+        <i class="req-symbol">*</i>
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="cbt">
+      </ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="otherSegmnts">
+      <ion-label class="cb" floating>Company/Consulate/Bank
+        <i class="req-symbol">*</i>
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="cb">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item *ngIf="KSAsegments">
+      <ion-label class="lt1" floating>Letter To (Line 1)
+        <i class="req-symbol">*</i>
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="lt1">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item *ngIf="KSAsegments">
+      <ion-label class="lt2" floating>Letter To (Line 2)
+
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="lt2">
+      </ion-input>
+    </ion-item>
+
+
+    
+    <ion-item *ngIf="UAEsegmnets || otherSegmnts" >
+      <ion-label floating >Travel Destination</ion-label>
+      <ion-input type="text" [(ngModel)]="TravelDestination">
+      </ion-input>
+    </ion-item>
+
+
+
+    <ion-item *ngIf="UAEsegmnets" >
+      <ion-label floating class="TecomSalary">Salary Update in TECOM
+       
+      </ion-label>
+      <ion-select [(ngModel)]="selectedTecomUpdateSalaryType" class="select-1" interface="action-sheet" >
+        <ion-option *ngFor="let item of tecomUpdateSalaryTypes" [value]="item"> {{item.flex_value}} </ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+
+    <button ion-button  color="dark" block (click)="previewLetterRequest()">Preview</button>
+   
+</ion-footer>

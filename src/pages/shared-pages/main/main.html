@@ -1,0 +1,59 @@
+<!-- <ion-content class="sxxp"> -->
+<ion-tabs #myTabs [ngClass]="tabClass1">
+       
+    <ion-tab [root]="tab1Root" tabTitle="Home" [rootParams]="tab1Params" tabIcon="apps"></ion-tab>
+    <ion-tab tabs-only (ionSelect)="showHappiness()"tabTitle="Happiness" tabIcon="happy" ></ion-tab>
+    <ion-tab [root]="inBoxRoot" tabTitle="Inbox" [tabBadge]="GetNoOfNotifications()"  [rootParams]="tab1Params" tabIcon="notifications"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Profile" tabIcon="ios-contact"></ion-tab>
+
+    <ion-tab [root]="more" tabTitle="More" tabIcon="ios-more" ></ion-tab> 
+
+
+  <div class="main-happiness-container" id='main-div' (click)="hideContainer($event)"  [@mainvisibilityChanged]="showHappinees"  >
+ 
+    <div class="smiles-div"    [ngClass]="divClass" id='sub-div'>
+
+            <div class="smile-text" >
+                How was your experience?
+            </div>
+          <div class="ico-div ico-div-left"  >
+              <button ion-button  color="dark"   icon-only outline  class="smile-fa-btn1"    (click)="happinessSetAction(1)"   [ngClass]="smileClass1" >
+                <fa-icon name="smile-o"  class="smile-ico1" [style.color]="smileIcon1"></fa-icon>
+                  
+              </button>
+             
+            </div>
+            <div class="ico-div"  >
+                <button ion-button   color="dark"  icon-only  outline class="smile-fa-btn1"  (click)="happinessSetAction(2)"  [ngClass]="smileClass2">
+                    <fa-icon name="meh-o"  class="smile-ico1"  [style.color]="smileIcon2"></fa-icon>
+                </button>
+               
+            </div>
+            
+            <div class="ico-div"  >
+                <button ion-button  color="dark"  icon-only outline   class="smile-fa-btn1"  (click)="happinessSetAction(3)"  [ngClass]="smileClass3">
+                    <fa-icon name="frown-o"  class="smile-ico1" [style.color]="smileIcon3" ></fa-icon>
+                </button>
+               
+               
+            </div>
+    
+            <ion-textarea id="txt-c" [(ngModel)]="comments" placeholder="Tell us more" autocomplete="on" autocorrect="on"  class="txt-area-h" (ionBlur)="goOut()" (ionFocus)="goUp()"></ion-textarea>
+
+            <div class="send-div"  *ngIf="selectedFace!=null">
+                <button ion-button  color="dark"  small  class="send-btn1"    (click)="sendAction()"    >
+                  {{buttonTxt}}
+                    
+                </button>
+
+      </div>
+
+      </div> 
+
+      </div>
+    
+
+
+</ion-tabs>
+
+  

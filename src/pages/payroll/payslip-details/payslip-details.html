@@ -1,0 +1,120 @@
+<!--
+  Generated template for the PayslipDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding="true">
+
+  <ion-segment [(ngModel)]="payslip">
+    <ion-segment-button value="Summary">
+      Summary
+    </ion-segment-button>
+    <ion-segment-button value="Earning">
+      Earnings
+    </ion-segment-button>
+    <ion-segment-button value="Deductions">
+      Deductions
+    </ion-segment-button>
+
+  </ion-segment>
+
+
+  <div [ngSwitch]="payslip">
+
+    <ion-list *ngSwitchCase="'Summary'">
+        <ion-list class="list1">
+        <ion-item>
+          <div class="list-name">
+           Total Earnings
+            <span class="list-value">
+              {{totalEarning | number:'1.2-2' }}{{currency}}
+            </span>
+          </div>
+        </ion-item>
+
+        <ion-item>
+            <div class="list-name">
+             Total Deductions
+              <span class="list-value">
+                {{totalDeduction | number:'1.2-2' }}{{currency}}
+              </span>
+            </div>
+          </ion-item>
+
+
+          <ion-item>
+              <div class="list-name bold-txt">
+               Net Pay
+                <span class="list-value bold-txt">
+                  {{netPay| number:'1.2-2' }}{{currency}}
+                </span>
+              </div>
+            </ion-item>
+
+        
+      </ion-list>
+
+
+
+
+
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'Earning'">
+
+
+      <ion-list class="list1">
+        <ion-item *ngFor="let item of earning">
+
+
+          <div class="list-name">
+
+            {{item.element_name}}
+            <span class="list-value">
+              {{item.pay_value}}
+            </span>
+          </div>
+        </ion-item>
+      </ion-list>
+
+
+
+
+
+
+    </ion-list>
+
+
+
+
+    <ion-list *ngSwitchCase="'Deductions'">
+      <ion-list class="list1">
+        <ion-item *ngFor="let item of deduction">
+
+
+          <div class="list-name">
+
+            {{item.element_name}}
+            <span class="list-value">
+              {{item.pay_value}}
+            </span>
+          </div>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+
+
+  </div>
+
+</ion-content>

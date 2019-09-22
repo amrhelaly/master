@@ -1,0 +1,85 @@
+<!--
+  Generated template for the EmployeePassportPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Employee Passport</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <timeline endIcon="call">
+    <timeline-item *ngFor="let item of passportData">
+
+      <ion-icon [name]="item.icon"></ion-icon>
+      <ion-card>
+
+        <ion-card-content>
+
+           
+          
+
+           
+          
+            <div class="list-name">
+      
+               Number
+              <span class="list-value">
+                {{item.passport_number}}
+              </span>
+            </div>
+
+            <div class="list-name">
+      
+              Name
+              <span class="list-value">
+                {{item.name_as_passport}}
+              </span>
+            </div>
+
+            <div class="list-name">
+      
+              Passport Type
+              <span class="list-value">
+                {{item.passport_type}}
+              </span>
+            </div>
+            
+
+            <div class="list-name">
+      
+              Country
+              <span class="list-value">
+                {{item.passport_country}}
+              </span>
+            </div>
+
+           
+            <div class="list-name">
+      
+              Issue Date
+              <span class="list-value">
+                {{item.issue_date}}
+              </span>
+            </div>
+
+            <div class="list-name">
+      
+              Expiry Date
+              <span class="list-value">
+                {{item.expiry_date}}
+              </span>
+            </div>
+
+
+        </ion-card-content>
+      </ion-card>
+    </timeline-item>
+    </timeline>
+</ion-content>

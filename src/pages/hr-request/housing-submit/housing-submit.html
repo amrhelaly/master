@@ -1,0 +1,64 @@
+<!--
+  Generated template for the HousingSubmitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Submit Request</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-item-divider color="light"> Request details</ion-item-divider>
+    <ion-list>
+  
+      <ion-item>
+        <div class="typec">
+            <span class=" typsesc" >
+                {{selectedRequestType}}
+              </span>
+          Request Type
+        </div>
+        
+  
+      </ion-item>
+      </ion-list>
+
+      <ion-item-divider color="light"   item-end>Approvers</ion-item-divider >
+        <ion-list  >
+
+      <ion-item ion-item *ngFor="let item of approverList"  block >
+          
+            
+      
+           
+            <ion-avatar item-start>
+               <img [src]="_DomSanitizer.bypassSecurityTrustUrl(+'data:image/jpg;base64,'+item.imge)" [hidden]="item.imge==null" />
+               <div class="divx" [hidden]="item.imge!=null"  >  {{item.intials}} </div>
+              </ion-avatar>
+              <h2 class="item-note typec2">
+            {{item.display_name}}
+            </h2 >
+          <!-- </div> -->
+        <p class="item-note dates2" >
+          {{item.job_title}}
+        </p>
+        <!-- <div class="item-note durationc" >
+            {{item.absence_no_days}}
+          </div> -->
+          <!-- <div class="item-note remarksc" >
+              {{item.start_date}}
+            </div> -->
+      </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+
+    <button ion-button  color="dark" block (click)="submitRerquest()" >Submit</button>
+   
+</ion-footer>

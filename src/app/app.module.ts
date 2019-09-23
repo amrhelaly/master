@@ -308,7 +308,7 @@ export class AppModule {
 
  static wsURL : string ='http://10.10.131.34:7003/mbcWebserviceP/resources';
  //static wsURL : string ='https://130.61.57.155/mbcWebserviceP/resources'; 
- static authentication : string = '';//Basic QW1oZWxhbHk6QW1yMDExNDMxNyRSZXZhMjAxNQ==';//'Basic V1NNb2JpbGV1c2VyOm1iY0BFUlBXU1VzZXIxOTE4'
+ static authentication : string = 'Basic QW1oZWxhbHk6QW1yMDExNDMxNyRSZXZhMjAxNQ==';//'Basic V1NNb2JpbGV1c2VyOm1iY0BFUlBXU1VzZXIxOTE4'
  static isCloud :boolean=false;
  static backendId:string ='';
 

@@ -297,20 +297,20 @@ export class AppModule {
  
 
 
- static wsURL : string ='https://FAEE5CBB8B4248F4BDB7C0B0043D61D9.mobile.ocp.oraclecloud.com:443/mobile/custom/MBCWSAPI';
- static authentication : string = 'Basic RkFFRTVDQkI4QjQyNDhGNEJEQjdDMEIwMDQzRDYxRDlfTW9iaWxlQW5vbnltb3VzX0FQUElEOjJiYjcxZDg4LTZiZGItNDZiZi04YzM1LTI2OGFlYzgwNTUyMQ=='
- static isCloud :boolean=true;
- static backendId:string ='05fb4316-2c8d-46dc-aafd-3c0ff61a7b61';
+//  static wsURL : string ='https://FAEE5CBB8B4248F4BDB7C0B0043D61D9.mobile.ocp.oraclecloud.com:443/mobile/custom/MBCWSAPI';
+//  static authentication : string = 'Basic RkFFRTVDQkI4QjQyNDhGNEJEQjdDMEIwMDQzRDYxRDlfTW9iaWxlQW5vbnltb3VzX0FQUElEOjJiYjcxZDg4LTZiZGItNDZiZi04YzM1LTI2OGFlYzgwNTUyMQ=='
+//  static isCloud :boolean=true;
+//  static backendId:string ='05fb4316-2c8d-46dc-aafd-3c0ff61a7b61';
 
  
 
 //Basic QW1oZWxhbHk6QW1yMDExNDMxNyRSZXZhMjAxNQ==
 
-//  static wsURL : string ='http://10.10.131.34:7003/mbcWebserviceP/resources';
-//  //static wsURL : string ='https://130.61.57.155/mbcWebserviceP/resources'; 
-//  static authentication : string = 'Basic QW1oZWxhbHk6QW1yMDExNDMxNyRSZXZhMjAxNQ==';//'Basic V1NNb2JpbGV1c2VyOm1iY0BFUlBXU1VzZXIxOTE4'
-//  static isCloud :boolean=false;
-//  static backendId:string ='';
+ static wsURL : string ='http://10.10.131.34:7003/mbcWebserviceP/resources';
+ //static wsURL : string ='https://130.61.57.155/mbcWebserviceP/resources'; 
+ static authentication : string = 'Basic d2VibG9naWM6T3JhY2xlMTIz';//'Basic V1NNb2JpbGV1c2VyOm1iY0BFUlBXU1VzZXIxOTE4'
+ static isCloud :boolean=false;
+ static backendId:string ='';
 
 
 
@@ -635,6 +635,8 @@ url =this.wsURL+'/'+ws;
       this.stopLoader(loader);
     }
     , err => {
+      alert(err.message);
+      alert(err.code);
       this.handleError(err,loader,AlertController,appCtrl);
 
  

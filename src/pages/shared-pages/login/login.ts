@@ -189,7 +189,7 @@ this.mmx=data;
 
 //
 //AppModule.authentication='Basic '+ AppModule.tobase64(this.user+':'+this.userPass);
-
+ 
 
     try {
       let loader = AppModule.showLoader(this.loadingController );

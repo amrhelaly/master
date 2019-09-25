@@ -1,0 +1,189 @@
+page-myspace {
+    @mixin intial-avatar
+{
+
+
+height: 40px;
+width: 40px;
+color: white;
+border-radius: 50%;
+text-align: center;
+padding-top: 12px;
+
+}
+.highlight {
+    background-color: #FFFF33 !important;
+ }
+
+
+
+
+.sh
+{
+
+@include intial-avatar;
+    background:#008000;
+
+
+}
+
+
+.bt
+{
+
+background: #309FDB;
+@include intial-avatar;
+
+}
+
+
+.lv
+{
+
+background: red;
+@include intial-avatar;
+
+}
+
+
+.asg
+{
+
+background: #ffb134;;
+@include intial-avatar;
+
+}
+
+
+
+
+
+.list_item_title1
+
+{
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    
+}
+.list_item_sub_title1
+{
+color: #000;
+font-size: 13px;
+font-weight: 400;
+white-space: normal  ;
+line-height: 1.2em;
+//max-height: 2.4em;
+display: block;
+clear: both;
+
+}
+.list_item_sub_title2
+{
+color: darkgray;
+font-size: 14px;
+font-weight: 400;
+float: left;
+
+
+}
+
+.list_item_sub_title3
+{
+color: darkgray;
+font-size: 14px;
+font-weight: 400;
+float: right;
+
+
+}
+
+.list_item_sub_block
+{
+    display: block;
+
+} 
+
+.list_item_sub_title4
+{
+   // display: inline-block;
+    //margin-left: 10px;
+    color: #928;
+font-size: 14px;
+font-weight: 400;
+}
+
+.list_item_sub_title5
+{
+color: #488aff;
+font-size: 14px;
+font-weight: 400;
+
+
+
+}
+.act-icon
+{
+    font-size: 30px;
+    color:red;
+}
+
+.act-btn
+{
+border-width: 0px;
+text-align: center;
+background: transparent !important;
+// height: 90px;
+z-index: 200;
+display: inline-block;
+// width:20px;
+}
+.containerz
+{
+
+    width: 100vw;
+    display: block;
+    text-align: center;
+    height: 60px;
+   // border-bottom: 1px red solid;
+   
+
+}
+
+.backz , .datez,.nextz
+{
+display: inline-block;
+
+} 
+
+.backz 
+{
+width:20%;
+float: left;
+
+}
+
+.datez 
+{
+width:60%;
+padding-top:5px;
+font-size: 20px;
+text-align: center
+
+}
+
+.nextz 
+{
+width:20%;
+float: right;
+
+}
+
+
+
+
+
+}
+
+
+

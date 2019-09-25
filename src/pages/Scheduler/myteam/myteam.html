@@ -1,0 +1,92 @@
+<!--
+  Generated template for the LeaveHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar hideBackButton='false' >
+        <ion-searchbar [(ngModel)]="searchemp" class="teams-search"
+        placeholder=" Search Team"
+      (ionInput)="getItems($event)"
+      
+     >
+    </ion-searchbar>
+     <!-- <ion-title> My Team</ion-title> -->
+    </ion-navbar>
+  
+  </ion-header>
+  
+
+  <ion-content  >
+
+
+
+
+
+  <div class="containerz"> 
+
+    <div class="backz">
+        <button ion-button icon-only outline  color='light' class='act-btn' (click)="goPreviousDay()" >
+            <ion-icon name="rewind" class='act-icon' icon></ion-icon>
+          </button>
+      </div>
+    
+      <div class="datez">
+         
+          <ion-datetime displayFormat="DD-MMM-YYYY"  class=""  [(ngModel)]="searchDate" (ionChange)="onchangeDate()"></ion-datetime>
+         
+        </div>
+    
+    
+        <div class="nextz">
+            <button ion-button icon-only outline  color='light' class='act-btn' (click)="goNextDay()" >
+                <ion-icon name="fastforward" class='act-icon' icon></ion-icon>
+              </button>
+          </div>
+    
+      </div>
+
+
+ 
+    
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing..."></ion-refresher-content>
+        </ion-refresher>
+     
+
+
+                  <ion-list >
+              
+                
+                    <ion-item *ngFor="let item of MyTeamList"  >
+                      <ion-avatar item-start>
+                          <!-- <img [src]="sanitized.bypassSecurityTrustUrl(+'data:image/jpg;base64,'+character.img)" /> -->
+                        <img  [hidden]="item.img==null"[src]="sanitized.bypassSecurityTrustUrl(+'data:image/jpg;base64,'+item.img)">
+                        <img  [hidden]="item.img!=null" src="assets/imgs/avatar.png">
+                        <!-- <img src="assets/imgs/mbclogo.png" > -->
+                      </ion-avatar>
+                     
+                       <!-- <h2 [class.leaves]="item.leaves!=null" [class.noleaves]="item.leaves==null" >  -->
+                         <h2 [ngClass]="item.leaves!=null ? 'leaves' : 'noleaves'">
+                        {{item.full_name}}</h2>
+                      <p style="font-size:10px;" >{{item.shift}}</p>
+                      <button ion-button clear item-end (click)="openModal({info: item})">more</button>
+                      </ion-item>
+                
+                                   </ion-list>
+                
+                  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" > 
+                    <ion-infinite-scroll-content
+                    loadingSpinner="bubbles"
+                    loadingText="Loading more data...">
+                  </ion-infinite-scroll-content> 
+                  </ion-infinite-scroll>
+  
+  
+  </ion-content>
+  

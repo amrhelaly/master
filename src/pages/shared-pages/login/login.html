@@ -11,22 +11,20 @@
  
     <ion-item class="user-class" Id="userId">
       <ion-icon item-start name="ios-person-outline" class="icon1"></ion-icon>
-      <ion-input type="text" placeholder="Usernamex" [(ngModel)]="user">
+      <ion-input type="text" placeholder="Username" [(ngModel)]="user">
 
       </ion-input>
     </ion-item>
     <ion-item class="pass-class" Id="passId">
       <ion-icon item-start name="ios-unlock-outline" class="icon1"></ion-icon>
-      <ion-input type="password" placeholder="Passwordx" [(ngModel)]="userPass">
+      <ion-input type="password" placeholder="Password" [(ngModel)]="userPass">
 
       </ion-input>
     </ion-item>
 
   </ion-list>
    
-
-  <button ion-button block color="dark" (click)="login()" class="btn1">Log1</button>
-
+  <button ion-button block color="dark" (click)="login()" class="btn1">Login</button>
  
   
   <div class='finger-div'  *ngIf="showFingerButton">

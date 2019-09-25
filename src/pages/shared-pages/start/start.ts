@@ -8,6 +8,10 @@ import { ProfileHomePage } from '../../profile/profile-home/profile-home';
 import {ThankscardsHomePage} from '../../thank-u/thankscards-home/thankscards-home';
 import {DashBoardPage} from '../../dash-board/dash-board/dash-board';
 import { AppModule } from '../../../app/app.module';
+
+//AA
+import { PublicSpacePage } from  '../../Scheduler/publicSpace/publicspace'
+
 /**
  * Generated class for the StartPage page.
  *
@@ -23,11 +27,12 @@ import { AppModule } from '../../../app/app.module';
 
 export class StartPage {
   searchItem :String;
-  items: Array<string> = ['ApprovalCenter', 'Profile',  'Leaves','Payroll', 'HRrequests','Expense' ,'Dashboard','thanksCard'];
+  items: Array<string> = ['ApprovalCenter', 'Profile',  'Leaves','Payroll', 'HRrequests','Expense' ,'Dashboard','Scheduler','thanksCard'];
 
 
   isHidden: any[];
   isExecutive:string;
+  isAA:string;
   
 
   addURL='http://www.mbc.net/en/privacy';
@@ -35,7 +40,8 @@ export class StartPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
    
 this.isHidden=[];
-this.isExecutive=AppModule.getProperty('isExecutive')
+this.isExecutive=AppModule.getProperty('isExecutive');
+this.isAA=AppModule.getProperty('AAorganization');
     
   }
 
@@ -211,4 +217,11 @@ this.isExecutive=AppModule.getProperty('isExecutive')
 
   }
   
+  // added by Heba 13-may-2019
+  goPublicSpace()
+  {
+    
+ this.navCtrl.push(PublicSpacePage);
+  }
+
 }

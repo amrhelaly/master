@@ -113,8 +113,14 @@ import { AES256 } from '@ionic-native/aes-256';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import * as CryptoJS from 'crypto-js';
+// AA
+import { PublicSpacePage } from '../pages/Scheduler/publicSpace/publicspace'
+import { MySpacePage } from '../pages/Scheduler/myspace/myspace'
+import { MyTeamPage } from '../pages/Scheduler/myteam/myteam'
+import {TeamDetailsPage} from '../pages/Scheduler/myteam/teamdetails';
+import { SchedulerProvider } from '../providers/scheduler/scheduler';
 
-import { Pro, AppInfo, DeployInfo } from '@ionic-native/pro';
+
 
 @NgModule({
   declarations: [
@@ -180,6 +186,13 @@ import { Pro, AppInfo, DeployInfo } from '@ionic-native/pro';
     OverTimeDbExecutivePage,
     ExtraTimeDbPage,
     ApprovedPoDbPage,
+
+    //aa
+    PublicSpacePage,
+    MySpacePage,
+    MyTeamPage,
+    TeamDetailsPage,
+    //
     TimelineComponent,
     TimelineItemComponent,
     TimelineTimeComponent,
@@ -261,7 +274,12 @@ import { Pro, AppInfo, DeployInfo } from '@ionic-native/pro';
     RecruitmentDbPage,
     OverTimeDbExecutivePage,
     ExtraTimeDbPage,
-    ApprovedPoDbPage
+    ApprovedPoDbPage,
+    //
+    PublicSpacePage,
+    MySpacePage,
+    MyTeamPage,
+    TeamDetailsPage
 
   ],
   providers: [
@@ -286,7 +304,9 @@ import { Pro, AppInfo, DeployInfo } from '@ionic-native/pro';
     ThanksCardProvider,
     ProfileProvider,
     DashbaordProvider,
-    AES256
+    AES256,
+    //AA
+    SchedulerProvider
   ]
 })
 export class AppModule {
@@ -302,13 +322,14 @@ export class AppModule {
 //  static isCloud :boolean=true;
 //  static backendId:string ='05fb4316-2c8d-46dc-aafd-3c0ff61a7b61';
 
- 
+
 
 //Basic QW1oZWxhbHk6QW1yMDExNDMxNyRSZXZhMjAxNQ==
 
- static wsURL : string ='http://10.10.131.34:7003/mbcWebserviceP/resources';
+ //static wsURL : string ='http://10.10.131.34:7003/mbcWebserviceP/resources';
+ static wsURL : string ='http://10.10.131.34:7003/mbcWebservicePG/resources';
  //static wsURL : string ='https://130.61.57.155/mbcWebserviceP/resources'; 
- static authentication : string = 'Basic d2VibG9naWM6T3JhY2xlMTIz';//'Basic V1NNb2JpbGV1c2VyOm1iY0BFUlBXU1VzZXIxOTE4'
+ static authentication : string = 'Basic d2VibG9naWM6T3JhY2xlMTIz';//'Basic QW1oZWxhbHk6QW1yMDExNDMxNyRSZXZhMjAxNQ==';//'Basic V1NNb2JpbGV1c2VyOm1iY0BFUlBXU1VzZXIxOTE4'
  static isCloud :boolean=false;
  static backendId:string ='';
 
@@ -593,6 +614,8 @@ catch (error) {
   
 }
 
+
+
 methodHeaders['Content-Type']='application/json ; charset=UTF-8';
 
 methodHeaders['Accept']='application/json';
@@ -635,8 +658,6 @@ url =this.wsURL+'/'+ws;
       this.stopLoader(loader);
     }
     , err => {
-      alert(err.message);
-      alert(err.code);
       this.handleError(err,loader,AlertController,appCtrl);
 
  

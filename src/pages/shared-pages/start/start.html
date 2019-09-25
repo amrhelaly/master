@@ -84,6 +84,15 @@
     <h6 ion-text color="dark" class="btn-txt" >Dashboards  </h6>
     <h6 ion-text color="dark" class="btn-txt" >&nbsp;</h6>
 </div> 
+
+<div class="mnb"  id="Scheduler" [hidden]="isHidden[7]" *ngIf="isAA!=0">
+    <button ion-button  color="dark"  class="ico-fa-btn1"  (click)="goPublicSpace()">
+        <fa-icon name="television"  class="aw-ico1"></fa-icon>
+    </button>
+   
+    <h6 ion-text color="dark" class="btn-txt" >Al Arabiya  </h6>
+    <h6 ion-text color="dark" class="btn-txt" >Scheduler </h6>
+</div> 
  
 <!-- keep this at last always -->
 <div class="mnb"  id="thanksCard" [hidden]="true">

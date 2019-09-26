@@ -8,7 +8,7 @@
   </ion-list-header>
 
   <ion-list class="list1">
- 
+
     <ion-item class="user-class" Id="userId">
       <ion-icon item-start name="ios-person-outline" class="icon1"></ion-icon>
       <ion-input type="text" placeholder="Usernamexx" [(ngModel)]="user">
@@ -23,10 +23,10 @@
     </ion-item>
 
   </ion-list>
-   
-  <button ion-button block color="dark" (click)="login()" class="btn1">x1Login</button>
- 
-  
+
+  <button ion-button block color="dark" (click)="login()" class="btn1">Login</button>
+
+
   <div class='finger-div'  *ngIf="showFingerButton">
   <button ion-button icon-only outline  color='light' class='finger-btn' (click)="fingerPrinAction()" >
     <ion-icon name="ios-finger-print" class='finger-icon' icon></ion-icon>
@@ -47,6 +47,6 @@
     <ion-img src='assets/imgs/aa_logos.png' class="img2"> </ion-img>
   </div>
   </div>
- 
+
 
 </ion-content>
